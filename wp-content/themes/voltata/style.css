@@ -1,0 +1,943 @@
+/*
+Theme Name: Voltata
+Theme URI: http://voltata.sultenhest.dk
+Author: Sultenhest
+Author URI: http://www.sultenhest.dk
+Description: Voltata is a simple theme with lots of opportunities for customization such as animations, social icons, aligments, custom widgets, post formats, galleries, Google Fonts and different page templates to choose from. Voltata is a work in progress theme, meaning that Voltata continuously will be updated with new features to allow the user even more customization, making your site truely unique. Voltata was designed using a mobile-first approach, meaning your content is responsive and takes center-stage, regardless of whether your visitors arrive by smartphone, tablet, laptop, or desktop computer.
+Version: 1.2.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: voltata
+Tags: black, white, light, dark, one-column, left-sidebar, right-sidebar, fluid-layout, flexible-header, responsive-layout, blavatar, custom-background, custom-header, custom-menu, featured-image-header, post-formats, sticky-post, theme-options, threaded-comments
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# General settings
+# Post content styling
+## Tables
+## Images
+# Header
+## Menu
+# Index page posts
+# Blog list
+# Widgets
+# Single.php
+# Comments
+# Frontpage
+# Full Width Page
+# Search, Achive and 404.php
+# Password Protected
+# Image.php
+# MEDIA QUERIES
+# Wordpress CSS Requirements
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# General settings
+--------------------------------------------------------------*/
+body{
+	color:#333333;
+	-ms-word-wrap: break-word;
+  word-wrap: break-word;
+}
+
+img, figure{
+	display:block;
+	max-width:100%;
+	height:auto;
+}
+
+iframe{
+	display:inline-block;
+	max-width:100%;
+}
+
+a, a:visited{
+	color:#333;
+	text-decoration:none;
+}
+
+a:hover, a:active, button:hover, button:active{
+	color:#337ab7;
+	-webkit-transition:all 0.3s;
+	transition:all 0.3s;
+	text-decoration:none;
+}
+
+::selection{
+  background:#bbbbbb;
+}
+
+::-moz-selection{
+	background:#bbbbbb;
+}
+
+#primary{
+	z-index:1;
+}
+
+#page{
+	margin-bottom:50px;
+}
+
+/*--------------------------------------------------------------
+# Post content styling
+## Tables
+## Images
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Tables
+--------------------------------------------------------------*/
+th{
+	padding-right:10px;
+}
+
+dt{
+	margin-top:5px;
+}
+
+/*--------------------------------------------------------------
+## Images in blogs and posts
+--------------------------------------------------------------*/
+.alignleft{
+	display:block;
+	float: left;
+  margin: 5px 20px 20px 0;
+}
+
+.alignright{
+	display:block;
+	float:right;
+  margin: 5px 0 20px 20px;
+}
+
+.aligncenter{
+	display:block;
+	margin:5px auto;
+}
+
+.wp-caption-text{
+	color:#666;
+}
+
+.carousel{
+	margin-bottom:15px;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget-title, .widgettitle{
+	border-bottom:1px solid #eee;
+}
+
+.widget ul{
+	padding-left:0px;
+	list-style-type:none;
+}
+
+/* Custom menu */
+.widget_nav_menu .sub-menu{
+	padding-left:15px;
+}
+
+/* Text Widget */
+.widget_text img{
+	margin:10px auto;
+}
+
+.widget_text .carousel-control{
+	background-image:none;
+}
+
+/* Categories */
+.widget ul .children{
+	padding-left:15px;
+}
+
+/* RSS feed */
+.rsswidget img{
+	display:inline;
+}
+
+/* Calendar */
+.widget_calendar table{
+	width:100%;
+}
+
+.widget_calendar table th{
+  width: 14.25%;
+}
+
+.widget_calendar table #today{
+	font-weight:bold;
+}
+
+.widget_calendar #next a{
+	float:right;
+}
+
+/* Recent posts + recent posts thumbs */
+.widget_recent_entries .post-date,
+.widget_recent_post_with_thumb .post-date{
+  display: block;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.widget_recent_post_with_thumb li{
+	margin:-15px 0;
+}
+
+.widget_recent_post_with_thumb .wp-post-image{
+	width:100px;
+}
+
+/* Pages */
+.widget_pages ul{
+	padding:0;
+}
+
+.widget_pages .page_item_has_children ul{
+	padding-left:15px;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.site-header{
+	padding-top:50px;
+}
+
+.text-center .custom-logo, .text-center .logo-image{
+	margin:0 auto;
+}
+
+.text-left .custom-logo, .text-left .logo-image{
+	margin:0;
+}
+
+.text-left .site-branding{
+	padding-left:30px;
+}
+
+.text-right .custom-logo, .text-right .logo-image{
+	float:right;
+}
+
+.text-right .site-title, .text-right .site-description{
+	clear:right;
+}
+
+.text-right .site-branding{
+	padding-right:30px;
+}
+.site-title a{
+	font-size: 50px;
+	font-weight: 300;
+	line-height: 1;
+	letter-spacing:-1px;
+	text-decoration:none;
+}
+
+.site-description{
+	padding-bottom:50px;
+}
+
+/*--------------------------------------------------------------
+## Menu
+--------------------------------------------------------------*/
+.menu{
+	padding-left:0;
+}
+
+#primary-menu{
+	list-style-type:none;
+	padding:0 15px;
+	margin-bottom:0;
+}
+
+#primary-menu li{
+	display:inline-block;
+}
+ 
+#primary-menu li a, #primary-menu .menu-item-has-children .sub-menu li a, #primary-menu .page_item_has_children .children li a{
+	padding:10px 15px;
+	display:block;
+}
+
+#primary-menu .menu-item-has-children .sub-menu li,
+#primary-menu .page_item_has_children .children li{
+	display:inline;
+}
+
+#primary-menu .menu-item-has-children,
+#primary-menu .page_item_has_children{
+	position:relative;
+}
+
+#primary-menu .menu-item-has-children .sub-menu,
+#primary-menu .page_item_has_children .children{
+	position:absolute;
+	top:40px;
+	left:0px;
+	width:200px;
+	display:none;
+	z-index:8;
+	padding:0;
+	border-left:1px solid #eee;
+	border-bottom:1px solid #eee;
+	border-right:1px solid #eee;
+	border-radius:0 0 4px 4px;
+	background-color:#ffffff;
+}
+
+#primary-menu .menu-item-has-children .sub-menu .menu-item-has-children .sub-menu,
+#primary-menu .page_item_has_children .children .page_item_has_children .children{
+	position:absolute;
+	top:-40px;
+	left:99px;
+	border:1px solid #eee;
+	border-radius:0 4px 4px 4px;
+}
+
+#primary-menu #search_icon{
+	top:2px;
+}
+
+.text-left #menu-search-field{
+	padding-left:45px;
+}
+
+.text-right #menu-search-field{
+	padding-right:45px;
+}
+
+#menu-search-field{
+	display:none;
+}
+
+#menu-search-field .input-group{
+  margin:3px 0 16px 0;
+}
+
+/* Mobile */
+#mobile-site-navigation{
+	margin:0 0 15px 0;
+	display:none;
+}
+
+#secondary-menu{
+	display:none;
+	text-align:center;
+	margin:10px 0 0 0;
+	list-style-type:none;
+}
+
+#secondary-menu ul{
+	list-style-type:none;
+}
+
+#secondary-menu li a{
+	display:block;
+	padding:10px 0;
+}
+
+#secondary-menu .menu-item-has-children .sub-menu,
+#primary-menu .page_item_has_children .children{
+	list-style-type: none;
+	padding:0;
+}
+
+#mobile-site-navigation .btn-group{
+	padding:0 15px;
+}
+
+#mobile-search-field{
+	display:none;
+	padding: 0px 15px;
+}
+
+#mobile-search-field .col-xs-12{
+	margin-top:15px;
+}
+
+/*--------------------------------------------------------------
+# Index page posts
+--------------------------------------------------------------*/
+#content{
+	padding-top:30px;
+}
+
+#main{
+	margin:0 15px;
+}
+
+.attachment-post-thumbnail{
+	width:100%;
+	height:auto;
+}
+
+.entry-title .glyphicon-pushpin{
+	top:3px;
+	font-size:0.9em;
+}
+
+.entry-title{
+	padding-bottom:1px;
+	margin-bottom:0;
+  border-bottom:1px solid #eee;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.entry-meta, .entry-meta a{
+  margin-bottom:5px;
+  color:#666;
+}
+
+.entry-meta a:hover{
+	color:#337ab7;
+}
+
+.glyphicon-option-horizontal{
+	text-align:center;
+	color:#eee;
+	margin:20px auto;
+}
+
+.entry-footer{
+	clear:both;
+}
+
+.entry-footer .glyphicon{
+	font-size:0.9em;
+	margin:0 5px 0 0;
+}
+
+.entry-footer #voltata-cat, .entry-footer #voltata-tag{
+	margin-right:10px;
+}
+
+.posts-navigation h2, .post-navigation h2{
+	display:none;
+}
+
+.nav-links a{
+  display:inline-block;
+  padding:5px 14px;
+  border:1px solid #ddd;
+  border-radius:4px;
+}
+
+.nav-links a:hover{
+	color:#333;
+	background-color:#eee;
+}
+
+.nav-previous{
+	float:left;
+}
+
+.nav-next{
+	float:right;
+}
+
+/*--------------------------------------------------------------
+# Blog list
+--------------------------------------------------------------*/
+.blog article .entry-title, .blog article .entry-meta, .blog article .entry-footer,
+.search article .entry-title, .search article .entry-meta, .search article .entry-footer{
+	border:0;
+	text-align:center;
+}
+
+.blog article .entry-content,
+.search article .entry-content{
+	text-align:justify;
+}
+
+.blog article .edit-link,
+.search article .edit-link{
+	display:block;
+	margin-top:20px;
+}
+
+article #voltata-cat, article #voltata-tag, article #voltata-com{
+  display:inline-block;
+}
+
+.blog article .attachment-voltata-blog-list{
+	margin:0 auto;
+}
+
+#authorbutton{
+	margin-top:15px;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer{
+	background-color:#333;
+	color:#eee;
+	padding:10px 0;
+	z-index:-1;
+}
+
+#footer a{
+	color:#eee;
+}
+
+#footer a:hover{
+	color:#337ab7;
+}
+
+#footer #secondary{
+	margin:0 0 20px 0;
+}
+
+#footer button{
+	margin:0 auto 25px;
+}
+
+#footer .footer-menu{
+	padding:0;
+}
+
+#footer .footer-menu li{
+	display:inline;
+	padding:0 5px;
+	border-right:1px solid #444;
+}
+
+#footer .footer-menu li:last-child{
+	border-right:none;
+}
+
+#footer #colophon, #footer #colophon a{
+	text-align:center;
+	color:#666;
+}
+
+#footer #colophon a:hover{
+	color:#eee;
+}
+
+#footer #footer-social-icons{
+	margin:20px 0;
+	text-align:center;
+}
+
+#footer #footer-social-icons a{
+	display:inline-block;
+	margin:2px;
+}
+
+#footer #footer-social-icons img{
+	width:35px;
+	height:auto;
+	opacity:0.8;
+}
+
+#footer #footer-social-icons img:hover{
+	opacity:1;
+	transition:all 0.3s;
+	-webkit-transition:all 0.3s;
+}
+
+/*--------------------------------------------------------------
+# Single.php
+--------------------------------------------------------------*/
+.single .entry-header{
+	text-align:center;
+	margin-bottom:5px;
+}
+
+.single .entry-title{
+	border:0;
+}
+
+.single .entry-content{
+	margin-bottom:20px;
+}
+
+.single .posted-on a{
+	color:#666;
+}
+
+.single .post-navigation .nav-previous{
+	float:left;
+	margin-bottom:10px;
+}
+
+.single #author-info-post{
+	border-top:1px solid #eee;
+	border-bottom:1px solid #eee;
+	margin:20px 0;
+	padding:15px 0;
+	text-align:center;
+}
+
+.single #author-info-post img{
+	border-radius:50%;
+}
+
+.single #author-info-post h2{
+	margin-top:0px;
+}
+
+.single #author-info-post p{
+	margin-bottom:0px;
+}
+
+.single #author-info-post ul{
+	list-style-type:none;
+	padding-left:0;
+}
+
+.post-edit-link{
+	margin-bottom:10px;
+}
+
+/*--------------------------------------------------------------
+# Comments
+--------------------------------------------------------------*/
+#comments{
+	clear:both;
+}
+
+.comments-title{
+	margin-bottom:0;
+  padding-bottom: 1px;
+}
+
+ol.comment-list{
+	padding:0;
+	list-style-type:none;
+}
+
+#comments .comment{
+	border-top:1px solid #eee;
+	padding:15px 0;
+}
+
+#comments .parent article{
+	padding-bottom:15px;
+}
+
+#comments .children .children .children .children li{
+  padding: 15px 0 0 0;
+}
+
+#comments .children .children .children .children li article{
+	padding:0;
+}
+
+ol.children{
+	border-left:1px solid #eee;
+	padding-left:30px;
+	list-style-type:none;
+}
+
+.comment-author img{
+  float: left;
+	border-radius:50%;
+  margin: 4px 7px 0 0;
+}
+
+.comment-metadata{
+	margin-top:-5px;
+}
+
+.comment-metadata time{
+	color:#666;
+}
+
+.comment-content{
+	padding:5px 0 10px 39px;
+}
+
+.reply{
+	padding-left:39px;
+}
+
+.reply a, .edit-link a, #fp-read-more{
+  display: inline-block;
+  padding: 5px 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.reply a:hover, .edit-link a:hover{
+	color:#333;
+	background-color:#eee;
+}
+
+/*--------------------------------------------------------------
+# Frontpage
+--------------------------------------------------------------*/
+#fp-first-part, #fp-second-part{
+	text-align:center;
+}
+
+.no-image{
+	height:135px;
+	width:100%;
+  background: #616161; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #616161 , #9bc5c3); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #616161 , #9bc5c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#fp-first-part h1{
+	margin-bottom:0;
+}
+
+#fp-first-part a, #fp-second-part a{
+	display:block;
+	text-align:center;
+}
+
+#fp-first-part hr, #fp-second-part hr, 
+article .entry-header hr, #fullwidth-hr{
+	max-width:100px;
+}
+
+#fp-first-part .entry-date, #fp-second-part .entry-date{
+	color:#666;
+	margin-bottom:10px;
+}
+
+#fp-first-part #secondary .col-md-12{
+	min-height:260px;
+	margin-bottom:20px;
+}
+
+#fp-first-part h3, #fp-second-part h3{
+	margin-bottom:0;
+}
+
+#fp-read-more{
+	margin-top:20px;
+}
+
+#fp-second-part .no-image{
+	width:100%;
+	height:350px;
+	background: #616161; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #616161 , #9bc5c3); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #616161 , #9bc5c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/*--------------------------------------------------------------
+# Full Width page
+--------------------------------------------------------------*/
+.page-template-content-fullwidth-page .entry-title{
+	border:0;
+	text-align:center;
+	margin-bottom:20px;
+}
+
+/*--------------------------------------------------------------
+# Search, Achive and 404.php
+--------------------------------------------------------------*/
+.search #secondary{
+	clear:both;
+	padding:0 15px;
+  margin:0;
+}
+
+.search{
+	text-align:center;
+}
+
+h1.page-title{
+	margin-bottom:0;
+}
+
+/*--------------------------------------------------------------
+# Password Protected
+--------------------------------------------------------------*/
+#passwordsubmit{
+  border-radius:0 4px 4px 0;
+}
+
+/*--------------------------------------------------------------
+# Image.php
+--------------------------------------------------------------*/
+.attachment article{
+	padding-bottom:30px;
+}
+
+.attachment .entry-attachment img{
+  margin:15px auto;
+}
+
+.attachment .entry-caption{
+	text-align:center;
+}
+
+.attachment .post-navigation{
+  text-align:center;
+  margin-bottom:5px;
+	padding:0;
+}
+
+.attachment .nav-previous{
+	float:none;
+}
+
+.image-navigation .nav-links{
+	width:100%;
+}
+
+.image-navigation .nav-prev{
+	float:left;
+}
+
+/*--------------------------------------------------------------
+# Post Format Gallery
+--------------------------------------------------------------*/
+.gallery{
+	clear:both;
+	display:inline-block;
+	width:100%;
+}
+
+.gallery-columns-1 .gallery-item{
+	width:100%;
+}
+
+.gallery-columns-2 .gallery-item{
+	width:50%;
+}
+
+.gallery-columns-3 .gallery-item{
+	width:33.3%;
+}
+
+.gallery-columns-4 .gallery-item{
+	width:25%;
+}
+
+.gallery-columns-5 .gallery-item{
+	width:20%;
+}
+
+.gallery-columns-6 .gallery-item{
+	width:16.5%;
+}
+
+.gallery-columns-7 .gallery-item{
+	width:14.28%;
+}
+
+.gallery-columns-8 .gallery-item{
+	width:12.5%;
+}
+
+.gallery-columns-9 .gallery-item{
+	width:11.11111%;
+}
+
+.gallery-item{
+	float:left;
+	display:inline;
+	padding:10px;
+}
+
+.gallery-item img{
+	margin:0 auto;
+}
+
+.gallery-item figcaption{
+	display:none;
+}
+
+/*--------------------------------------------------------------
+# MEDIA QUERIES
+--------------------------------------------------------------*/
+@media screen and (max-width: 1200px) {
+	#fp-second-part .no-image{
+	  height:283px;
+	}
+}
+
+@media screen and (max-width: 990px) {
+	.site-description{
+		padding-bottom:30px;
+	}
+	
+  header #site-navigation{
+		display:none;
+	}
+	
+	#secondary{
+		clear:both;
+		padding-top:15px;
+	}
+	
+	header #mobile-site-navigation{
+		display:block;
+	}
+	
+	#fp-second-part .no-image{
+	  height:210px;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.gallery-columns-3 .gallery-item, .gallery-columns-4 .gallery-item, .gallery-columns-5 .gallery-item, .gallery-columns-6 .gallery-item,
+	.gallery-columns-7 .gallery-item, .gallery-columns-8 .gallery-item, .gallery-columns-9 .gallery-item{
+		width:33%;
+	}
+	
+	#fp-second-part .no-image{
+	  height:110px;
+	}
+	
+	.single .post-navigation .nav-previous, .single .post-navigation .nav-next{
+		float:none;
+	}
+	
+	#authorbutton, .post-edit-link, .nav-links a{
+		width:100%;
+		text-align:center;
+	}
+}
+
+/*--------------------------------------------------------------
+# Wordpress CSS Requirements
+--------------------------------------------------------------*/
+.sticky, .gallery-caption, .bypostauthor{}
+
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
