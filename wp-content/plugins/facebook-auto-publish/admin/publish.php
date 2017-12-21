@@ -94,10 +94,12 @@ function xyz_fbap_link_publish($post_ID) {
 	$af=get_option('xyz_fbap_af');
 	
 	$postpp= get_post($post_ID);global $wpdb;
-	$entries0 = $wpdb->get_results( 'SELECT user_nicename FROM '.$wpdb->prefix.'users WHERE ID='.$postpp->post_author);
+	$entries0 = $wpdb->get_results($wpdb->prepare( 'SELECT user_nicename,display_name FROM '.$wpdb->prefix.'users WHERE ID=%d',$postpp->post_author));
 	
 	foreach( $entries0 as $entry ) {			
-	$user_nicename=$entry->user_nicename;}
+	$user_nicename=$entry->user_nicename;
+	$user_displayname=$entry->display_name;
+	}
 	if ($postpp->post_status == 'publish')
 	{
 		$posttype=$postpp->post_type;
@@ -278,6 +280,7 @@ function xyz_fbap_link_publish($post_ID) {
 				$message4=str_replace('{POST_EXCERPT}', $excerpt, $message3);
 				$message5=str_replace('{POST_CONTENT}', $description, $message4);
 				$message5=str_replace('{USER_NICENAME}', $user_nicename, $message5);
+				$message5=str_replace('{USER_DISPLAY_NAME}', $user_displayname, $message5);
 				$publish_time=get_the_time('Y/m/d',$post_ID );
 				$message5=str_replace('{POST_PUBLISH_DATE}', $publish_time, $message5);
 				$message5=str_replace('{POST_ID}', $post_ID, $message5);

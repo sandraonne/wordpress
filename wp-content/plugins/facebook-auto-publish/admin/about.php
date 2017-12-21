@@ -157,7 +157,7 @@ Facebook Auto Publish automatically publishes posts from your blog to your  Face
 	</tr>
 	
 	<tr>
-		<td>Hash Tags support for Facebook, Twitter, Pinterest and Google plus</td>
+		<td>Hash Tags support for Facebook, Twitter, Linkedin, Pinterest and Google plus</td>
 		<td><img src="<?php echo plugins_url("images/cross.png",__FILE__);?>">
 		</td>
 		<td><img src="<?php echo plugins_url("images/tick.png",__FILE__);?>">

@@ -312,6 +312,7 @@ function dethide(id)
 							of your blog.<br />{USER_NICENAME} - Insert the nicename
 							of the author.<br />{POST_ID} - Insert the ID of your post.
 							<br />{POST_PUBLISH_DATE} - Insert the publish date of your post.
+							<br />{USER_DISPLAY_NAME} - Insert the display name of the author.
 						</div></td>
 	<td>
 	<select name="xyz_fbap_info" id="xyz_fbap_info" onchange="xyz_fbap_info_insert(this)">
@@ -324,6 +325,7 @@ function dethide(id)
 		<option value ="6">{USER_NICENAME}   </option>
 		<option value ="7">{POST_ID}   </option>
 		<option value ="8">{POST_PUBLISH_DATE}   </option>
+		<option value= "9">{USER_DISPLAY_NAME}</option>
 		</select> </td></tr><tr><td>&nbsp;</td><td>
 		<textarea id="xyz_fbap_message"  name="xyz_fbap_message" style="height:80px !important;" ><?php if($ms4==""){ 
 								echo esc_textarea(get_option('xyz_fbap_message'));}?></textarea>

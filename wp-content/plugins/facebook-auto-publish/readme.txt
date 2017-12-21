@@ -3,8 +3,8 @@ Contributors: f1logic
 Donate link: http://xyzscripts.com/donate/
 Tags:  facebook, facebook auto publish, publish post to facebook, add link to facebook, facebook publishing, post to facebook, post to fb, social media auto publish, social media publishing, social network auto publish, social media, social network
 Requires at least: 3.0																				
-Tested up to: 4.8.3
-Stable tag: 1.4.5
+Tested up to: 4.9.1
+Stable tag: 1.4.6
 License: GPLv2 or later
 
 Publish posts automatically to Facebook page or profile.
@@ -125,6 +125,10 @@ SSL peer verification may not be functioning in your server. Please turn off SSL
 2. Publishing options while creating a post.
 
 == Changelog ==
+
+= Facebook Auto Publish 1.4.6 =
+* Added USER_DISPLAY_NAME in message formats
+* Minor security issues fixed
 
 = Facebook Auto Publish 1.4.5 =
 * Compatibility with facebook API V 2.11 added

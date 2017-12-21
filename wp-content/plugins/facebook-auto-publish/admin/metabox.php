@@ -13,14 +13,14 @@ function xyz_fbap_add_custom_box()
 	
 if(isset($_GET['action']) && $_GET['action']=="edit" && !empty($_GET['post']))   /// empty check added for fixing client scenario
 	{
-		$postid=$_GET['post'];
+		$postid=intval($_GET['post']);
 		$get_post_meta=get_post_meta($postid,"xyz_fbap",true);
 		if($get_post_meta==1){
 			$GLOBALS['edit_flag']=1;
 		}
 		global $wpdb;
 		$table='posts';
-		$accountCount = $wpdb->query( 'SELECT * FROM '.$wpdb->prefix.$table.' WHERE id="'.$postid.'" and post_status!="draft" LIMIT 0,1' ) ;
+		$accountCount = $wpdb->query($wpdb->prepare( 'SELECT * FROM '.$wpdb->prefix.$table.' WHERE id=%d and post_status!=%s LIMIT %d,%d',array($postid,'draft',0,1) )) ;
 		if($accountCount>0){
 			$GLOBALS['edit_flag']=1;
 			}
@@ -234,6 +234,7 @@ function inArray(needle, haystack) {
 							of your blog.<br />{USER_NICENAME} - Insert the nicename
 							of the author.<br />{POST_ID} - Insert the ID of your post.
 							<br />{POST_PUBLISH_DATE} - Insert the publish date of your post.
+							<br />{USER_DISPLAY_NAME} - Insert the display name of the author.
 						</div>
 		</td>
 	<td>
@@ -247,6 +248,7 @@ function inArray(needle, haystack) {
 		<option value ="6">{USER_NICENAME}   </option>
 		<option value ="7">{POST_ID}   </option>
 		<option value ="8">{POST_PUBLISH_DATE}   </option>
+		<option value= "9">{USER_DISPLAY_NAME}</option>
 		</select> </td></tr>
 		
 		<tr id="fpabpmftarea"><td>&nbsp;</td><td>
