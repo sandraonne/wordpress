@@ -6,7 +6,7 @@
  * @category Functions
  * 
  * @author wpdevelop
- * @link http://wpbookingcalendar.com/
+ * @link https://wpbookingcalendar.com/
  * @email info@wpbookingcalendar.com
  *
  * @modified 29.09.2015
@@ -190,7 +190,7 @@ function wpbc_get_times_in_form( $booking_form_data, $booking_type ){
 
     $is_time_exist = false;
 
-    //if ( false )                                                                                                        //FixIn: 8.0.1.4        //Fix: TimeFree
+//if ( false )                                                                                                            //FixIn: 8.0.1.4        //FixIn:  TimeFree
         if ( ! class_exists('wpdev_bk_biz_s') )
             return $is_time_exist;
 

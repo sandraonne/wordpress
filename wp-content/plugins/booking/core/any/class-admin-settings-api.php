@@ -5,7 +5,7 @@
  * @category    Abstract Class
  * @author      wpdevelop
  *
- * @web-site    http://wpbookingcalendar.com/
+ * @web-site    https://wpbookingcalendar.com/
  * @email       info@wpbookingcalendar.com 
  * @modified    2015-10-06
  */
@@ -888,7 +888,7 @@ abstract class WPBC_Settings_API  {
             </th>
             <td><fieldset>
         <?php         
-        } 
+        }
         ?>                
                     <legend class="screen-reader-text"><span><?php echo wp_kses_post( $field['title'] ); ?></span></legend>
                     <select
@@ -931,8 +931,11 @@ abstract class WPBC_Settings_API  {
                                           <?php 
                                             if ( (  is_array( $field['value'] ) ) && ( in_array( $option_value, $field['value'] ) ) ) {
                                                 selected( true );  
-                                            } else
-                                                selected( $option_value, $field['value'] ); 
+                                            } else {
+												if ( ! is_array( $field['value'] ) ) {									//FixIn: 8.1.2
+													selected( $option_value, $field['value'] );
+												}
+                                            }
                                           ?> 
                                           <?php disabled( in_array($option_value, $field['disabled_options'] ), true ); ?> 
                                           <?php echo self::get_custom_attr_static( $option_parameters ); ?> 

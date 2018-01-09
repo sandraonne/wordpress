@@ -4,7 +4,7 @@
  * @category Content of Settings page 
  * @author wpdevelop
  *
- * @web-site http://wpbookingcalendar.com/
+ * @web-site https://wpbookingcalendar.com/
  * @email info@wpbookingcalendar.com 
  * 
  * @modified 2015-11-02

@@ -6,7 +6,7 @@
  * @category Bookings
  * 
  * @author wpdevelop
- * @link http://wpbookingcalendar.com/
+ * @link https://wpbookingcalendar.com/
  * @email info@wpbookingcalendar.com
  *
  * @modified 2014.04.23
@@ -169,6 +169,27 @@ function wpdev_bk_insert_new_booking() {
             } 
 
         } else {
+
+        	if (  ( defined( 'WP_BK_AUTO_APPROVE_IF_ADD_IN_ADMIN_PANEL' ) ) && ( WP_BK_AUTO_APPROVE_IF_ADD_IN_ADMIN_PANEL )  ){
+				if ( strpos($_SERVER['HTTP_REFERER'], $admin_uri ) !== false ) {
+					global $wpdb;
+					$is_approve_or_pending = "1";
+					$appr_sql = $wpdb->prepare( "UPDATE {$wpdb->prefix}bookingdates SET approved = %s WHERE booking_id IN ({$result_bk_id})", $is_approve_or_pending );
+					if ( false === $wpdb->query( $appr_sql ) ){
+						?> <script type="text/javascript"> if ( jQuery('#submiting<?php echo $bktype; ?>' ).length ) {  document.getElementById('submiting<?php echo $bktype; ?>').innerHTML = '<div style=&quot;height:20px;width:100%;text-align:center;margin:15px auto;&quot;><?php debuge_error('Error during updating BD - Dates',__FILE__,__LINE__); ?></div>'; }</script> <?php
+						die('Error during updating BD - Dates');
+					}
+					wpbc_send_email_approved( $result_bk_id, 1, "" );
+
+					if (  ( defined( 'WP_BK_AUTO_SEND_PAY_REQUEST_IF_ADD_IN_ADMIN_PANEL' ) ) && ( WP_BK_AUTO_SEND_PAY_REQUEST_IF_ADD_IN_ADMIN_PANEL )  ){
+						if ( function_exists( 'wpbc_send_email_payment_request' ) ) {
+							$formdata = escape_any_xss( $_POST[ "form" ] );
+							$payment_reason = '';
+							$is_send = wpbc_send_email_payment_request( $result_bk_id , $bktype , $formdata , $payment_reason );
+						}
+					}
+				}
+            }
             ?> setReservedSelectedDates('<?php echo $bktype; ?>'); <?php
         }
 
@@ -234,7 +255,7 @@ function wpbc_add_new_booking( $params , $is_edit_booking = false ){
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     
     $dates_in_diff_formats = wpbc_get_dates_in_diff_formats( $params[ "dates" ], $bktype, $formdata  );
-//debuge($dates_in_diff_formats);    
+//debuge($dates_in_diff_formats);
     $str_dates__dd_mm_yyyy = $dates_in_diff_formats['string'];
     // $my_dates   = $dates_in_diff_formats['array'];
     $start_time = $dates_in_diff_formats['start_time'];
@@ -382,17 +403,17 @@ function wpbc_add_new_booking( $params , $is_edit_booking = false ){
     if ( isset( $params["skip_page_checking_for_updating"] ) )  $skip_page_checking_for_updating = (bool) $params["skip_page_checking_for_updating"];
     else                                                        $skip_page_checking_for_updating = true; 
     make_bk_action('wpdev_booking_reupdate_bk_type_to_childs', $booking_id, $bktype, $str_dates__dd_mm_yyyy,  array($start_time, $end_time ) , $formdata , $skip_page_checking_for_updating );    
-    
+
     if (  ( defined( 'WP_BK_AUTO_APPROVE_WHEN_ZERO_COST' ) ) && ( WP_BK_AUTO_APPROVE_WHEN_ZERO_COST )  ){   // Auto  approve booking if cost = 0.        
         $booking_cost = apply_bk_filter('get_booking_cost_from_db', '', $booking_id);
         if  ( ( empty( $booking_cost ) ) || ( intval( $booking_cost ) === 0 ) ) {
             $is_approve_or_pending = "1";
-             $appr_sql = $wpdb->prepare( "UPDATE {$wpdb->prefix}bookingdates SET approved = %s WHERE booking_id IN ({$booking_id})", $is_approve_or_pending ); 
+             $appr_sql = $wpdb->prepare( "UPDATE {$wpdb->prefix}bookingdates SET approved = %s WHERE booking_id IN ({$booking_id})", $is_approve_or_pending );
             if ( false === $wpdb->query( $appr_sql ) ){
                 ?> <script type="text/javascript"> if ( jQuery('#submiting<?php echo $bktype; ?>' ).length ) {  document.getElementById('submiting<?php echo $bktype; ?>').innerHTML = '<div style=&quot;height:20px;width:100%;text-align:center;margin:15px auto;&quot;><?php debuge_error('Error during updating BD - Dates',__FILE__,__LINE__); ?></div>'; }</script> <?php
-                if ( ! empty( $params[ 'return_instead_die_on_error' ] ) ) return 0;									//FixIn: 7.2.1.7	
+                if ( ! empty( $params[ 'return_instead_die_on_error' ] ) ) return 0;									//FixIn: 7.2.1.7
 				die('Error during updating BD - Dates');
-            } 
+            }
             wpbc_send_email_approved( $booking_id, 1, "" );
         }
     }    

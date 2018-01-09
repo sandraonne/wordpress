@@ -5,7 +5,7 @@
  * @category Dubug info showing
  * @author wpdevelop
  *
- * @web-site http://wpbookingcalendar.com/
+ * @web-site https://wpbookingcalendar.com/
  * @email info@wpbookingcalendar.com 
  * 
  * @modified 09.09.2015

@@ -5,7 +5,7 @@
  * @category    Settings API
  * @author      wpdevelop
  *
- * @web-site    http://wpbookingcalendar.com/
+ * @web-site    https://wpbookingcalendar.com/
  * @email       info@wpbookingcalendar.com 
  * @modified    2016-08-07
  * 
@@ -35,95 +35,20 @@ class WPBC_API_SettingsImportGCal extends WPBC_Settings_API  {
         $options = wp_parse_args( $options, $default_options );
 
         /**
-	 * Activation  and deactivation  of these options already  done at  the wpbc-gcal.php file
-        // 
-        // add_bk_action( 'wpbc_other_versions_activation',   array( $this, 'activate'   ) );      // Activate
-        // add_bk_action( 'wpbc_other_versions_deactivation', array( $this, 'deactivate' ) );      // Deactivate
+	 	 * Activation  and deactivation  of these options already  done at  the wpbc-gcal.php file
+         //
+         // add_bk_action( 'wpbc_other_versions_activation',   array( $this, 'activate'   ) );      // Activate
+         // add_bk_action( 'wpbc_other_versions_deactivation', array( $this, 'deactivate' ) );      // Deactivate
         */
         
         parent::__construct( $id, $options, $init_fields_values );              // Define ID of Setting page and options                
     }
 
-    
-// TODO: 
-    
+
     /** Define settings Fields  */
     public function init_settings_fields() {
-        
+
         $this->fields = array();
-
-        // TODO: 
-        //      add_bk_option( 'booking_gcal_events_form_fields', 'a:3:{s:5:"title";s:9:"text^name";s:11:"description";s:12:"text^details";s:5:"where";s:5:"text^";}');                
-        
-        // Problem with  email^email  field,  previously  its was text^email
-        // problem with  textarea^details  field,  previously  its was text^details
-    
-    
-        ////////////////////////////////////////////////////////////////////////
-        // Get form fields from different forms in the paid versions
-        ////////////////////////////////////////////////////////////////////////
-        $options = array();
-        $options[ 'text^' ] = __('None' ,'booking');
-        
-        $booking_forms = wpbc_get_fields_list_in_booking_form();
-//debuge($booking_forms);        
-        foreach ( $booking_forms as $single_booking_form ) {
-            
-            //OPTGROUP - Open
-            $options[ $single_booking_form['name'] ] = array(
-                                                  'title' => ucfirst( trim( $single_booking_form['name'] ) )
-                                                , 'optgroup' => true
-                                                , 'close'    => false );
-            
-                $field_listing = $single_booking_form['listing'];
-                for ( $i = 0; $i < $single_booking_form['num']; $i++ ) {
-                    $options[   (  ( trim( $single_booking_form['name'] ) != 'standard' ) ? trim( $single_booking_form['name'] ) . '^'  : '' ) .
-                                trim( $single_booking_form['listing']['fields_type'][$i] ). '^' . trim( $single_booking_form['listing']['fields'][$i] )
-                            ] = ( trim( $single_booking_form['listing']['labels'][$i] ) );    
-                }
-
-            //OPTGROUP - Close
-            $options[ $single_booking_form['name'] . '_close' ] = array(
-                                                  'title' => $single_booking_form['name'] // ucfirst( trim( $option_group_name ) )
-                                                , 'optgroup' => true
-                                                , 'close'    => true );
-        }
-        ////////////////////////////////////////////////////////////////////////        
-//debuge($options); 
-
-        
-        //             booking_gcal_events_form_fields                          - real  name of option to  save. This option  have to  be skipped during saving and during loading need some actions.
-        $this->fields['booking_gcal_events_form_fields_title'] = array(   
-                                    'type' => 'select'
-                                    , 'default' => ''
-                                    , 'title' => __('Event Title', 'booking')
-                                    , 'description' => sprintf( __( 'Select field for assigning to %sevent property%s' ,'booking'), '<b>', '</b>' )
-                                    , 'description_tag' => 'span'
-                                    , 'css' => ''
-                                    , 'options' => $options
-                                    , 'group' => 'events_fields'
-                            );        
-        $this->fields['booking_gcal_events_form_fields_description'] = array(   
-                                    'type' => 'select'
-                                    , 'default' => ''
-                                    , 'title' => __('Event Description (optional field)' ,'booking')
-                                    , 'description' => sprintf( __( 'Select field for assigning to %sevent property%s' ,'booking'), '<b>', '</b>' )
-                                    , 'description_tag' => 'span'
-                                    , 'css' => ''
-                                    , 'options' => $options
-                                    , 'group' => 'events_fields'
-                            );        
-        $this->fields['booking_gcal_events_form_fields_where'] = array(   
-                                    'type' => 'select'
-                                    , 'default' => ''
-                                    , 'title' => __('Location' ,'booking')
-                                    , 'description' => sprintf( __( 'Select field for assigning to %sevent property%s' ,'booking'), '<b>', '</b>' )
-                                    , 'description_tag' => 'span'
-                                    , 'css' => ''
-                                    , 'options' => $options
-                                    , 'group' => 'events_fields'
-                            );        
-        ////////////////////////////////////////////////////////////////////////
 
 
         // Auto import
@@ -172,7 +97,7 @@ class WPBC_API_SettingsImportGCal extends WPBC_Settings_API  {
                                                         . '<div class="wpbc-settings-notice notice-info" style="text-align:left;"><strong>' 
                                                             . __('Note:' ,'booking') . '</strong> '
                                                             . sprintf( __('You can check in this %sinstruction how to generate and use your Google API key%s.' ,'booking')
-                                                                        , '<a href="http://wpbookingcalendar.com/faq/import-gc-events/">'
+                                                                        , '<a href="https://wpbookingcalendar.com/faq/import-gc-events/">'
                                                                         ,'</a>'
                                                                     )
                                                         . '</div>'
@@ -201,42 +126,7 @@ class WPBC_API_SettingsImportGCal extends WPBC_Settings_API  {
                                     //, 'validate_as' => array( 'required' )
                                     , 'is_demo_safe' => wpbc_is_this_demo()
                             );
-        
-        
-        $options = array();
-        $options[''] = __('Default' ,'booking');
-        
-        global $wpbc_booking_region_cities_list;                    // structure: $wpbc_booking_region_cities_list["Pacific"]["Fiji"] = "Fiji";
-        
-        foreach ( $wpbc_booking_region_cities_list as $region => $region_cities) {
-            
-            //OPTGROUP - Open
-            $options[ $region ] = array(
-                                                  'title' => ucfirst( trim( $region ) )
-                                                , 'optgroup' => true
-                                                , 'close'    => false );
-            
-                foreach ($region_cities as $city_key => $city_title) {
-                    
-                    $options[   trim( $region .'/'. $city_key )  ] = ( trim( $city_title ) );    
-                }
 
-            //OPTGROUP - Close
-            $options[ $region . '_close' ] = array(
-                                                  'title' => $region // ucfirst( trim( $option_group_name ) )
-                                                , 'optgroup' => true
-                                                , 'close'    => true );
-        }        
-        $this->fields['booking_gcal_timezone'] = array(   
-                                    'type' => 'select'
-                                    , 'default' => ''
-                                    , 'title' => __('Timezone', 'booking')
-                                    , 'description' => __('Select a city in your required timezone, if you are having problems with dates and times.' ,'booking')
-                                    , 'description_tag' => 'p'
-                                    , 'css' => ''
-                                    , 'options' => $options
-                                    , 'group' => 'general'
-                            );        
         ////////////////////////////////////////////////////////////////////////
         
 
@@ -522,7 +412,7 @@ class WPBC_Page_SettingsImportGCal extends WPBC_Page_Structure {
                             , 'css_classes' => ''                               // CSS class(es)
                             //, 'icon' => 'http://.../icon.png'                 // Icon - link to the real PNG img
                             //, 'font_icon' => 'glyphicon glyphicon-envelope'   // CSS definition of Font Icon
-                            , 'default' =>  !true                                // Is this sub tab activated by default or not: true || false. 
+                            , 'default' =>  false                               // Is this sub tab activated by default or not: true || false.
                             , 'disabled' => false                               // Is this sub tab deactivated: true || false. 
                             , 'checkbox'  => false                              // or definition array  for specific checkbox: array( 'checked' => true, 'name' => 'feature1_active_status' )   //, 'checkbox'  => array( 'checked' => $is_checked, 'name' => 'enabled_active_status' )
                             , 'content' => 'content'                            // Function to load as conten of this TAB
@@ -534,7 +424,7 @@ class WPBC_Page_SettingsImportGCal extends WPBC_Page_Structure {
         return $tabs;
     }
 
-//TODO:
+
     /** Show Content of Settings page */
     public function content() {
 
@@ -557,25 +447,6 @@ class WPBC_Page_SettingsImportGCal extends WPBC_Page_Structure {
         
         $this->get_api();                                                       // Load fields Data from DB              
 
-        /**
-	 * O v e r l o a d    some   values   for our pseudo options - during normal  opening of page
-         * if we making saving,  so  we need to overload these options
-         * one more time
-         */
-        $booking_gcal_events_form_fields = get_bk_option( 'booking_gcal_events_form_fields'); 
-        $booking_gcal_events_form_fields = maybe_unserialize( $booking_gcal_events_form_fields );
-
-        if (isset($booking_gcal_events_form_fields['title']))
-            $this->get_api()->set_field_value( 'booking_gcal_events_form_fields_title', $booking_gcal_events_form_fields['title'] );
-
-        if (isset($booking_gcal_events_form_fields['description']))
-            $this->get_api()->set_field_value( 'booking_gcal_events_form_fields_description', $booking_gcal_events_form_fields['description'] );
-
-        if (isset($booking_gcal_events_form_fields['where']))
-            $this->get_api()->set_field_value( 'booking_gcal_events_form_fields_where', $booking_gcal_events_form_fields['where'] );
-
-        $this->get_api()->set_values_to_fields();
-        
         
         ////////////////////////////////////////////////////////////////////////
         //  S u b m i t   Main Form  
@@ -612,7 +483,6 @@ class WPBC_Page_SettingsImportGCal extends WPBC_Page_Structure {
         ?>
         <div class="wpdvlp-sub-tabs" style="background:none;border:none;box-shadow: none;padding:0;"><span class="nav-tabs" style="text-align:right;">
             <a href="javascript:void(0);" onclick="javascript:wpbc_scroll_to('#wpbc_settings_import_gcal_events_general_metabox' );" original-title="" class="nav-tab go-to-link"><span><?php _e('General Settings', 'booking'); ?></span></a>
-            <a href="javascript:void(0);" onclick="javascript:wpbc_scroll_to('#wpbc_settings_import_gcal_events_fields_metabox' );" original-title="" class="nav-tab go-to-link"><span><?php _e('Assign events fields to specific booking form field' ,'booking'); ?></span></a>
             <?php  if ( wpbc_is_mu_user_can_be_here('only_super_admin') ) {  ?>
             <a href="javascript:void(0);" onclick="javascript:wpbc_scroll_to('#wpbc_settings_import_gcal_events_auto_import_metabox' );" original-title="" class="nav-tab go-to-link"><span><?php _e('Auto import events' ,'booking'); ?></span></a>
             <?php } ?>
@@ -647,14 +517,7 @@ class WPBC_Page_SettingsImportGCal extends WPBC_Page_Structure {
 				if ( class_exists('wpdev_bk_personal') )
 					wpbc_hidden_search_by_id_field_in_main_form( array( 'search_get_key' => 'wh_resource_id' ) );													//FixIn: 8.0.1.12
 
-                ?><div class="clear" style="height:10px;"></div><?php /* ?>
-                <div class="wpbc-settings-notice notice-info" style="text-align:left;">
-                    <strong><?php _e('Note!' ,'booking'); ?></strong> <?php 
-                        printf( __('If you do not see search results at front-end side of your website, please check troubleshooting instruction %shere%s' ,'booking'),'<a href="http://wpbookingcalendar.com/faq/no-search-results/" target="_blank">','</a>');
-                    ?>
-                </div>
-                <div class="clear" style="height:10px;"></div><?php 
-*/
+                ?><div class="clear" style="height:10px;"></div><?php
                      
                 ?><div class="wpbc_settings_row wpbc_settings_row_left"><?php
                 
@@ -665,14 +528,8 @@ class WPBC_Page_SettingsImportGCal extends WPBC_Page_Structure {
                         
                     wpbc_close_meta_box_section();
 
-                    
-                    wpbc_open_meta_box_section( 'wpbc_settings_import_gcal_events_fields', __('Assign events fields to specific booking form field' ,'booking') );
 
-                        $this->get_api()->show( 'events_fields' );                               
-                        
-                    wpbc_close_meta_box_section();
-                    
-                    if ( wpbc_is_mu_user_can_be_here('only_super_admin') ){ 
+                    if ( wpbc_is_mu_user_can_be_here('only_super_admin') ){
                     
                         wpbc_open_meta_box_section( 'wpbc_settings_import_gcal_events_auto_import', __('Auto import events' ,'booking') );
 
@@ -680,7 +537,8 @@ class WPBC_Page_SettingsImportGCal extends WPBC_Page_Structure {
 
                         wpbc_close_meta_box_section();
                     }
-                    
+
+
                     wpbc_open_meta_box_section( 'wpbc_settings_import_gcal_events_default_settings', __('Default settings for retrieving events' ,'booking') );
 
                         $this->get_api()->show( 'default_settings' );  
@@ -741,7 +599,7 @@ class WPBC_Page_SettingsImportGCal extends WPBC_Page_Structure {
         // update_bk_option( 'booking_cache_expiration' , WPBC_Settings_API::validate_text_post_static( 'booking_cache_expiration' ) );
     }
 
-//TODO: claer unused CSS here
+	//TODO: clear unused CSS here
 
     // <editor-fold     defaultstate="collapsed"                        desc=" CSS  &   JS   "  >
     
@@ -882,31 +740,6 @@ add_action('wpbc_menu_created', array( new WPBC_Page_SettingsImportGCal() , '__c
 
 
 /**
-	 * Validate some fields during saving to DB
- *  Skip  saving some pseudo  options,  instead of that  creare new real  option.
- * 
- * @param array $validated_fields
- * @return type
- */
-function wpbc_fields_before_saving_to_db__import_gcal( $validated_fields ) {
-    
-    // Set  new option based on pseudo  options
-    $validated_fields['booking_gcal_events_form_fields'] = array(
-                                                                  'title'       => $validated_fields['booking_gcal_events_form_fields_title']
-                                                                , 'description' => $validated_fields['booking_gcal_events_form_fields_description']
-                                                                , 'where'       => $validated_fields['booking_gcal_events_form_fields_where']
-                                                                );
-    // Unset  several pseudo options.
-    unset( $validated_fields['booking_gcal_events_form_fields_title'] );
-    unset( $validated_fields['booking_gcal_events_form_fields_description'] );
-    unset( $validated_fields['booking_gcal_events_form_fields_where'] );
-    
-    return $validated_fields;
-}
-add_filter('wpbc_fields_before_saving_to_db__import_gcal', 'wpbc_fields_before_saving_to_db__import_gcal');
-
-
-/**
 	 * Override fields array  of Settings page,  AFTER saving to  DB. Some fields have to have different Values.
  *  Set  here values for our pseudo-options, after saving to  DB
  *  Because they was not overloading during this saving
@@ -919,19 +752,6 @@ function wpbc_fields_after_saving_to_db__import_gcal( $fields, $page_id ) {
     
     if ( $page_id == 'import_gcal' ) {                                          // Check our API ID  relative saving of this settings page
 
-        $booking_gcal_events_form_fields = get_bk_option( 'booking_gcal_events_form_fields'); 
-        $booking_gcal_events_form_fields = maybe_unserialize( $booking_gcal_events_form_fields );
-
-        if (isset($booking_gcal_events_form_fields['title']))
-            $fields[ 'booking_gcal_events_form_fields_title' ]['value'] = $booking_gcal_events_form_fields['title'];
-        
-        if (isset($booking_gcal_events_form_fields['description']))
-            $fields[ 'booking_gcal_events_form_fields_description' ]['value'] = $booking_gcal_events_form_fields['description'];
-        
-        if (isset($booking_gcal_events_form_fields['where']))
-            $fields[ 'booking_gcal_events_form_fields_where' ]['value'] = $booking_gcal_events_form_fields['where'];
-        
-        
         // Update Cron                                                          //FixIn: 7.0.1.9
         if ( $fields['booking_gcal_auto_import_is_active']['value'] == 'On' ) {
             
@@ -954,7 +774,3 @@ function wpbc_fields_after_saving_to_db__import_gcal( $fields, $page_id ) {
     return $fields;
 }
 add_filter('wpbc_fields_after_saving_to_db', 'wpbc_fields_after_saving_to_db__import_gcal', 10, 2);
-
-
-// TODO:
-// test real  import functionality!!!

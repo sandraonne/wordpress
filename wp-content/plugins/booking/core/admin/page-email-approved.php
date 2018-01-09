@@ -5,7 +5,7 @@
  * @category Menu
  * @author wpdevelop
  *
- * @web-site http://wpbookingcalendar.com/
+ * @web-site https://wpbookingcalendar.com/
  * @email info@wpbookingcalendar.com 
  * 
  * @modified 2015-04-09
@@ -1106,6 +1106,12 @@ function wpbc_send_email_approved( $approved_id_str, $is_send_emeils, $denyreaso
                     $mail_api->fields_values['content'] = str_replace( $exist_replace,  $new_replace ,$mail_api->fields_values['content'] );
 
                     $replace[ $new_replace ] = apply_bk_filter( 'wpdev_booking_set_booking_edit_link_at_email', '['.$exist_replace.']', $booking_id );
+                } else if (																								//FixIn: 8.1.8
+                				   ( ! empty( $shortcode_params ) )
+								&& ( isset( $shortcode_params['end'] ) )
+								&& ( $shortcode_params['end'] < strlen( $mail_api->fields_values['content'] ) )
+						)  {
+					$pos = $shortcode_params['end'];
                 } else {
                     $shortcode_params = false;                                      // FixIn: 7.0.1.58                           
                 } 

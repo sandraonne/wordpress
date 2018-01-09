@@ -4,7 +4,7 @@
  * @category Booking Listing Table in Admin Panel
  * @author wpdevelop
  *
- * @web-site http://wpbookingcalendar.com/
+ * @web-site https://wpbookingcalendar.com/
  * @email info@wpbookingcalendar.com 
  * 
  * @modified 2015-12-28

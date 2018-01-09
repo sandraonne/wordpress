@@ -14,7 +14,7 @@ class WPBC_Welcome {
 
     public $minimum_capability = 'read';    //'manage_options';
     
-    private $asset_path = 'http://wpbookingcalendar.com/assets/';
+    private $asset_path = 'https://wpbookingcalendar.com/assets/';
     //private $asset_path = 'http://beta/assets/';
 
 
@@ -284,12 +284,12 @@ class WPBC_Welcome {
         list( $display_version ) = explode( '-', WPDEV_BK_VERSION );
         ?>
         <div class="changelog point-releases">
-            <h3><?php echo( "Maintenance and Security Release" ); ?></h3>
+            <h3><?php echo( "Maintenance Release" ); ?></h3>
             <p><strong><?php printf( 'Version %s',
-                $display_version ); ?></strong> <?php printf( 'addressed some security issues and fixed %s bugs',
+                $display_version ); ?></strong> <?php printf( 'addressed some minor issues and fixed %s bugs',
                 '' ); ?>. 
         <?php printf( 'For more information, see %sthe release notes%s',
-                '<a href="http://wpbookingcalendar.com/changelog/" target="_blank">',
+                '<a href="https://wpbookingcalendar.com/changelog/" target="_blank">',
                 '</a>' ) ?>.
             </p>
         </div>                        
@@ -515,7 +515,7 @@ class WPBC_Welcome {
                                   
                                   array( 'h4'   => wpbc_recheck_strong_symbols( 'Import of **.ics** feeds (files)' ), 
                                          'text' =>  '<ul style="list-style: disc outside;padding: 20px;margin:0;">'
-. '<li>' . wpbc_recheck_strong_symbols( 'Native integration  with our **<a target="_blank" href="http://wpbookingcalendar.com/help/booking-manager/">Booking Manager</a>** plugin for ability to import **.ics** feeds or files' ) . '</li>'
+. '<li>' . wpbc_recheck_strong_symbols( 'Native integration  with our **<a target="_blank" href="https://wpbookingcalendar.com/help/booking-manager/">Booking Manager</a>** plugin for ability to import **.ics** feeds or files' ) . '</li>'
 . '<li>' . wpbc_recheck_strong_symbols( 'Import external **.ics** feeds via shortcodes at pages. 
 							It gives a great flexibility to import **.ics** feeds from different sources <em>(like ' ) 
 						. '<strong><a href="https://www.airbnb.com/help/article/99/how-do-i-sync-my-airbnb-calendar-with-another-calendar" target="_blank">Airbnb</a></strong>, '
@@ -544,7 +544,7 @@ class WPBC_Welcome {
                                   , array( 'h4'   => wpbc_recheck_strong_symbols( 'Export of **.ics** feeds (files)' ), 
                                          'text' =>   
                                                      '<ul style="list-style: disc outside;padding: 20px;margin:0;">'
-. '<li>' . wpbc_recheck_strong_symbols( 'Native integration  with our **<a target="_blank" href="http://wpbookingcalendar.com/help/booking-manager/">Booking Manager</a>** plugin for ability to export **.ics** feeds' ) . '</li>'
+. '<li>' . wpbc_recheck_strong_symbols( 'Native integration  with our **<a target="_blank" href="https://wpbookingcalendar.com/help/booking-manager/">Booking Manager</a>** plugin for ability to export **.ics** feeds' ) . '</li>'
 . '<li>' . wpbc_recheck_strong_symbols( 'Configure specific ULR feed(s) at setting page' ) . '</li>'
 . '<li>' . wpbc_recheck_strong_symbols( 'Use this URL(s) in external websites <em>(like ' ) 
 						. '<strong><a href="https://www.airbnb.com/help/article/99/how-do-i-sync-my-airbnb-calendar-with-another-calendar" target="_blank">Airbnb</a></strong>, '
@@ -1210,7 +1210,7 @@ class WPBC_Welcome {
                         <em>
                             <?php
                             printf( 'For more information about current update, see %srelease notes%s', 
-                                    '<a class="" href="http://wpbookingcalendar.com/changelog/" target="_blank">', '</a>' );
+                                    '<a class="" href="https://wpbookingcalendar.com/changelog/" target="_blank">', '</a>' );
                             ?>
                         </em>
                     </td>
@@ -1285,7 +1285,7 @@ class WPBC_Welcome {
                                                              . sprintf( 'Or add Booking Calendar %s**widget**%s to your sidebar.', '<a href="' . admin_url( 'widgets.php' ) . '">', '</a>' ) 
                                                              . '</p>'
                                                              . '<p>' . sprintf( 'If you need to add shortcode manually, you can read how to add it %shere%s.', 
-                                                                                '<a href="http://wpbookingcalendar.com/help/booking-calendar-shortcodes/">', '</a>')
+                                                                                '<a href="https://wpbookingcalendar.com/help/booking-calendar-shortcodes/">', '</a>')
                                                              . '</p>'
                                                              . '<p>' . sprintf( '* **Note.** You can add new booking(s) also from the admin panel (Booking > Add booking page).*' )
                                                              . '</p>'                                                  
@@ -1367,16 +1367,16 @@ class WPBC_Welcome {
 
                 $this->show_col_section( array( 
                                               array( 
-                                                     'text' => '<span>' . sprintf( 'Check out our %sHelp%s', '<a href="http://wpbookingcalendar.com/help/" target="_blank" >', '</a>' ) . '</span>'
-                                                             . '<p>' . sprintf( 'See %sFAQ%s', '<a href="http://wpbookingcalendar.com/faq/" target="_blank">', '</a>' ) . '</p>'
+                                                     'text' => '<span>' . sprintf( 'Check out our %sHelp%s', '<a href="https://wpbookingcalendar.com/help/" target="_blank" >', '</a>' ) . '</span>'
+                                                             . '<p>' . sprintf( 'See %sFAQ%s', '<a href="https://wpbookingcalendar.com/faq/" target="_blank">', '</a>' ) . '</p>'
                                                    ) 
                                             , array( 
                                                      'text' => '<strong>' . sprintf( 'Still having questions?' ) . '</strong>'
-                                                             . '<p>' . sprintf( 'Check our %sForum%s or contact %sSupport%s', '<a href="http://wpbookingcalendar.com/support/" target="_blank">', '</a>', '<a href="http://wpbookingcalendar.com/contact/" target="_blank">', '</a>' ) . '</p>'
+                                                             . '<p>' . sprintf( 'Check our %sForum%s or contact %sSupport%s', '<a href="https://wpbookingcalendar.com/support/" target="_blank">', '</a>', '<a href="https://wpbookingcalendar.com/contact/" target="_blank">', '</a>' ) . '</p>'
                                                    ) 
                                             , array( 
                                                      'text' => '<strong>' . sprintf( 'Need even more functionality?' ) . '</strong>'
-                                                             . '<p>' . sprintf( ' Check %shigher versions%s of Booking Calendar', '<a href="http://wpbookingcalendar.com/overview/" target="_blank">', '</a>' ) . '</p>'
+                                                             . '<p>' . sprintf( ' Check %shigher versions%s of Booking Calendar', '<a href="https://wpbookingcalendar.com/overview/" target="_blank">', '</a>' ) . '</p>'
 
                                                    ) 
 
@@ -1509,7 +1509,7 @@ at the popup configuration dialog, during inserting booking shortcode into post 
             
             $this->show_separator();
 
-            echo wpbc_recheck_strong_symbols( '<div style="font-size: 0.95em;font-style:italic;text-align:right;margin:5px 0 10px;">Check many other nice features in  Booking Calendar Personal version at <a target="_blank" href="http://wpbookingcalendar.com/overview/">features list</a> and test <a target="_blank" href="http://wpbookingcalendar.com/demo/">live demo</a>.</div>' );
+            echo wpbc_recheck_strong_symbols( '<div style="font-size: 0.95em;font-style:italic;text-align:right;margin:5px 0 10px;">Check many other nice features in  Booking Calendar Personal version at <a target="_blank" href="https://wpbookingcalendar.com/overview/">features list</a> and test <a target="_blank" href="https://wpbookingcalendar.com/demo/">live demo</a>.</div>' );
             
             ?><div class="clear" style="height:30px;"></div><?php
             
@@ -1618,7 +1618,7 @@ at the popup configuration dialog, during inserting booking shortcode into post 
             
             $this->show_separator();
 
-            echo wpbc_recheck_strong_symbols( '<div style="font-size: 0.95em;font-style:italic;text-align:right;margin:5px 0 10px;">Check many other nice features in Booking Calendar Business Small version at <a target="_blank" href="http://wpbookingcalendar.com/overview/">features list</a> and test <a target="_blank" href="http://wpbookingcalendar.com/demo/">live demo</a>.</div>' );
+            echo wpbc_recheck_strong_symbols( '<div style="font-size: 0.95em;font-style:italic;text-align:right;margin:5px 0 10px;">Check many other nice features in Booking Calendar Business Small version at <a target="_blank" href="https://wpbookingcalendar.com/overview/">features list</a> and test <a target="_blank" href="https://wpbookingcalendar.com/demo/">live demo</a>.</div>' );
             
             ?><div class="clear" style="height:30px;"></div><?php
             
@@ -1732,7 +1732,7 @@ at the popup configuration dialog, during inserting booking shortcode into post 
 . '<p>' . 'Also, you can define **specific week day(s) as start day** in calendar selection for the **specific season**.' 
         . '<br/>*For example, in "High Season", you can allow start day selection only at Friday in the "Low Season" to start day selection from any weekday.*' . '</p>'
 
-. '<p>' . '*Read more about this configuration <a href="http://wpbookingcalendar.com/help/booking-calendar-shortcodes/" targe="_blank">here</a> (at **options** parameter section).*' . '</p>'
+. '<p>' . '*Read more about this configuration <a href="https://wpbookingcalendar.com/help/booking-calendar-shortcodes/" targe="_blank">here</a> (at **options** parameter section).*' . '</p>'
                                                                                             
                                               )
                                         
@@ -1741,7 +1741,7 @@ at the popup configuration dialog, during inserting booking shortcode into post 
   '<p>' . 'This feature provide ability to use the **different time slots selections** in the booking form **for different selected week days or seasons**.' . '</p>' 
 . '<p>' . 'Each week day (day of specific season filter) can have different time slots list.' . '</p>'
                                               
-. '<p>' . 'You can check more info about this configuration at <a href="http://wpbookingcalendar.com/help/different-time-slots-selections-for-different-days/" targe="_blank">this page</a>.' . '</p>'
+. '<p>' . 'You can check more info about this configuration at <a href="https://wpbookingcalendar.com/help/different-time-slots-selections-for-different-days/" targe="_blank">this page</a>.' . '</p>'
 . '<p>' . '**Note.** In the same way you can configure showing any different form fields, not only  timeslots.' . '</p>'                                             
                                               )
                                         ) 
@@ -1749,7 +1749,7 @@ at the popup configuration dialog, during inserting booking shortcode into post 
 
             $this->show_separator();
 
-            echo wpbc_recheck_strong_symbols( '<div style="font-size: 0.95em;font-style:italic;text-align:right;margin:5px 0 10px;">Check many other nice features in Booking Calendar Business Medium version at <a target="_blank" href="http://wpbookingcalendar.com/overview/">features list</a> and test <a target="_blank" href="http://wpbookingcalendar.com/demo/">live demo</a>.</div>' );
+            echo wpbc_recheck_strong_symbols( '<div style="font-size: 0.95em;font-style:italic;text-align:right;margin:5px 0 10px;">Check many other nice features in Booking Calendar Business Medium version at <a target="_blank" href="https://wpbookingcalendar.com/overview/">features list</a> and test <a target="_blank" href="https://wpbookingcalendar.com/demo/">live demo</a>.</div>' );
             
             ?><div class="clear" style="height:30px;"></div><?php
             
@@ -1774,7 +1774,7 @@ at the popup configuration dialog, during inserting booking shortcode into post 
 
 .'<p>' . '**Note!** Its possible to make reservation only for **entire date(s)**, not a time slots  
    *(data about time slots for booking resources with capacity higher than one, will be record into your DB, but do not apply to availability)*.' . '</p>'
-. '<p>' . '* **Configuration.** Set capacity of booking resources at Booking > **Resources** page. You can read more info about configurations of booking resources, capacity and availability  at  <a href="http://wpbookingcalendar.com/help/booking-resource/" target="_blank">this page</a>.*' . '</p>'
+. '<p>' . '* **Configuration.** Set capacity of booking resources at Booking > **Resources** page. You can read more info about configurations of booking resources, capacity and availability  at  <a href="https://wpbookingcalendar.com/help/booking-resource/" target="_blank">this page</a>.*' . '</p>'
                                               )
                                         , array(  'img'  => 'premium/capacity3.png', 'img_style'=>'margin:20px 0;width:99%;' ) 
                                         ) 
@@ -1786,10 +1786,10 @@ at the popup configuration dialog, during inserting booking shortcode into post 
                                                  'text' =>
  '<p>' . 'Your visitors can even **search available booking resources** (properties or services) **for specific dates** *(like in this <a href="http://bl.wpbookingcalendar.com/search/" target="_blank">live demo</a>)*.' . '</p>'
 .'<p>' . 'Beside standard parameters: **check in** and **check out** dates, number of **visitors**, you can define **additional parameters** for your search form *(for example, searching property  with  specific amenities)*.
-    <br />You can read more about this configurations at <a href="http://wpbookingcalendar.com/faq/selecting-tags-in-search-form/" target="_blank">FAQ</a>.' . '</p>'
-.'<p>' . '**Note!** Plugin  will search only among pages with booking forms for *<a href="http://wpbookingcalendar.com/help/booking-resource/" target="_blank">single or parent</a>* booking resources. You need to insert one booking form per page.' . '</p>'
+    <br />You can read more about this configurations at <a href="https://wpbookingcalendar.com/faq/selecting-tags-in-search-form/" target="_blank">FAQ</a>.' . '</p>'
+.'<p>' . '**Note!** Plugin  will search only among pages with booking forms for *<a href="https://wpbookingcalendar.com/help/booking-resource/" target="_blank">single or parent</a>* booking resources. You need to insert one booking form per page.' . '</p>'
 . '<p>' . '* **Configuration.** Customize your **search form**  and **search  results** at Booking > Settings > **Search** page. 
-    After that you can <a href="http://wpbookingcalendar.com/help/booking-calendar-shortcodes/"  target="_blank">insert search form</a> shortcode into page and test.*' . '</p>'
+    After that you can <a href="https://wpbookingcalendar.com/help/booking-calendar-shortcodes/"  target="_blank">insert search form</a> shortcode into page and test.*' . '</p>'
 
                                               )
                                         , array(  'img'  => 'premium/search-results2.png', 'img_style'=>'margin:20px 0;width:99%;' ) 
@@ -1805,7 +1805,7 @@ at the popup configuration dialog, during inserting booking shortcode into post 
     <br/>You can define discount as **fixed cost** or as **percentage** from the total cost  of booking.
 ' . '</p>'
 . '<p>' . '* **Configuration.** Create your coupons codes for discounts at Booking > Resources > **Coupons** page. 
-    Then insert <a href="http://wpbookingcalendar.com/help/booking-form-fields/" target="_blank">coupon text field</a> into your booking form at Booking > Settings > Fields page.*' . '</p>'
+    Then insert <a href="https://wpbookingcalendar.com/help/booking-form-fields/" target="_blank">coupon text field</a> into your booking form at Booking > Settings > Fields page.*' . '</p>'
 
                                               )
                                         , array(  'img'  => 'premium/coupons.png', 'img_style'=>'margin:2px 0;width:99%;' ) 
@@ -1827,7 +1827,7 @@ at the popup configuration dialog, during inserting booking shortcode into post 
 
             $this->show_separator();
 
-            echo wpbc_recheck_strong_symbols( '<div style="font-size: 0.95em;font-style:italic;text-align:right;margin:5px 0 10px;">Check many other nice features in Booking Calendar Business Large version at <a target="_blank" href="http://wpbookingcalendar.com/overview/">features list</a> and test <a target="_blank" href="http://wpbookingcalendar.com/demo/">live demo</a>.</div>' );
+            echo wpbc_recheck_strong_symbols( '<div style="font-size: 0.95em;font-style:italic;text-align:right;margin:5px 0 10px;">Check many other nice features in Booking Calendar Business Large version at <a target="_blank" href="https://wpbookingcalendar.com/overview/">features list</a> and test <a target="_blank" href="https://wpbookingcalendar.com/demo/">live demo</a>.</div>' );
             
             ?><div class="clear" style="height:30px;"></div><?php
             
@@ -1857,7 +1857,7 @@ at the popup configuration dialog, during inserting booking shortcode into post 
 . '<p>' . 'There are 2 types of the users: **super booking admin** and **regular users**. 
           Super booking admins can see and manage the bookings and booking resources from any users. Super booking admin can activate and manage status of other users.' . '</p>' 
 
-. '<p>' . 'You can read more about the initial configuration at <a href="http://wpbookingcalendar.com/faq/multiuser-version-init-config/" target="_blank">FAQ</a>.' . '</p>'   
+. '<p>' . 'You can read more about the initial configuration at <a href="https://wpbookingcalendar.com/faq/multiuser-version-init-config/" target="_blank">FAQ</a>.' . '</p>'   
 
                                               ) 
                                         , array(  'img'  => 'premium/users2.png', 'img_style'=>'margin-top:20px;width:95%;' ) 

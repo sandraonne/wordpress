@@ -4,7 +4,7 @@
  * @category Booking Form Settings
  * @author wpdevelop
  *
- * @web-site http://wpbookingcalendar.com/
+ * @web-site https://wpbookingcalendar.com/
  * @email info@wpbookingcalendar.com 
  * 
  * @modified 2016-03-23
@@ -68,12 +68,12 @@ class WPBC_Page_SettingsFormFieldsFree extends WPBC_Page_Structure {
                             //, 'hided'     => false                              // Is this tab hided: true || false. 
                             , 'subtabs'   => array()   
                     );
-        
-        $tabs[ 'upgrade-link' ] = array(
+        if ( ! class_exists( 'wpdev_bk_personal' ) )																	//FixIn: 8.1.12
+        	$tabs[ 'upgrade-link' ] = array(
                               'title' => __('Check Premium Features','booking')                // Title of TAB    
                             , 'hint'  => __('Upgrade to higher versions', 'booking')              // Hint    
                             //, 'page_title' => __('Upgrade', 'booking')        // Title of Page    
-                            , 'link' => 'http://wpbookingcalendar.com/overview/'                    // Can be skiped,  then generated link based on Page and Tab tags. Or can  be extenral link
+                            , 'link' => 'https://wpbookingcalendar.com/overview/'                    // Can be skiped,  then generated link based on Page and Tab tags. Or can  be extenral link
                             , 'position' => 'right'                             // 'left'  ||  'right'  ||  ''
                             //, 'css_classes' => ''                             // CSS class(es)
                             //, 'icon' => ''                                    // Icon - link to the real PNG img
@@ -96,7 +96,7 @@ class WPBC_Page_SettingsFormFieldsFree extends WPBC_Page_Structure {
         
         if ( ! wpbc_is_mu_user_can_be_here('activated_user') ) return false;    // Check if MU user activated, otherwise show Warning message.
    
-        if ( ! wpbc_is_mu_user_can_be_here('only_super_admin') ) return false;  // User is not Super admin, so exit.  Basically its was already checked at the bottom of the PHP file, just in case.
+        //if ( ! wpbc_is_mu_user_can_be_here('only_super_admin') ) return false;  // User is not Super admin, so exit.  Basically its was already checked at the bottom of the PHP file, just in case.
             
               
         // Init Settings API & Get Data from DB ////////////////////////////////
@@ -286,8 +286,8 @@ class WPBC_Page_SettingsFormFieldsFree extends WPBC_Page_Structure {
                 onclick="javascript:wpbc_verify_window_opening(<?php echo get_bk_current_user_id(); ?>, '<?php echo $my_close_open_alert_id; ?>');"
             >&times;</a>
             <strong class="alert-heading">Note!</strong>
-                Check how in <a href="http://wpbookingcalendar.com/overview/" target="_blank" style="text-decoration:underline;">other versions of Booking Calendar</a> 
-                possible fully <a href="http://wpbookingcalendar.com/help/booking-form-fields/" target="_blank" style="text-decoration:underline;">customize the booking form</a> 
+                Check how in <a href="https://wpbookingcalendar.com/overview/" target="_blank" style="text-decoration:underline;">other versions of Booking Calendar</a> 
+                possible fully <a href="https://wpbookingcalendar.com/help/booking-form-fields/" target="_blank" style="text-decoration:underline;">customize the booking form</a> 
                 <em>(add or remove fields, configure time-slots, change structure of booking form, etc...).</em>
         </div>    
     </span>    
@@ -488,8 +488,8 @@ class WPBC_Page_SettingsFormFieldsFree extends WPBC_Page_Structure {
 
                     if ( $form_field['type'] == 'select' ) {
                         $my_form.='   <select name="'. $form_field['name'] . $my_boook_type.'" id="'. $form_field['name'] . $my_boook_type.'" class="input-xlarge'
-                                    . ( ( $form_field['required'] == 'On' ) ? ' wpdev-validates-as-required' : '' ) 
-                                    . '" />';
+                                    . ( ( $form_field['required'] == 'On' ) ? ' wpdev-validates-as-required' : '' )
+                                    . '" >';																			//FixIn: 8.1.1.4
 
                                 $form_field['value'] = preg_split( '/\r\n|\r|\n/', $form_field['value'] );
                                 
@@ -527,7 +527,7 @@ class WPBC_Page_SettingsFormFieldsFree extends WPBC_Page_Structure {
                     if ( $form_field['type'] == 'textarea' ) {
                         $my_form.='   <textarea  rows="3" name="'. $form_field['name'] . $my_boook_type.'" id="'. $form_field['name'] . $my_boook_type.'" class="input-xlarge'
                                     . ( ( $form_field['required'] == 'On' ) ? ' wpdev-validates-as-required' : '' ) 
-                                    . '" />';  
+                                    . '" >';																			//FixIn: 8.1.1.4
 
                         $my_form.='</textarea>'; 
                     }
@@ -1716,7 +1716,7 @@ class WPBC_Page_SettingsFormFieldsFree extends WPBC_Page_Structure {
             echo
                 '<p><strong>' . __('Shortcodes' ,'booking') . '.</strong> ' 
                            . sprintf(__('You can generate the form fields for your form (at the left side) by selection specific field in the above selectbox.' ,'booking'),'<code><strong>[email* email]</strong></code>')
-                .'<br/>'   . sprintf(__('Please read more about the booking form fields configuration %shere%s.' ,'booking'),'<a href="http://wpbookingcalendar.com/help/booking-form-fields/" target="_blank">', '</a>' ) 
+                .'<br/>'   . sprintf(__('Please read more about the booking form fields configuration %shere%s.' ,'booking'),'<a href="https://wpbookingcalendar.com/help/booking-form-fields/" target="_blank">', '</a>' ) 
 
                 . '</p><p><strong>' . __('Default Form Templates' ,'booking') . '.</strong> ' . 
                              sprintf(__('You can reset your active form template by selecting default %sform template%s at the top toolbar. Please select the form template and click on %sReset%s button for resetting only active form (Booking Form or Content of Booking Fields form). Click  on %sBoth%s button if you want to reset both forms: Booking Form and Content of Booking Fields form.' ,'booking')

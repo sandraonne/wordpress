@@ -6,7 +6,7 @@
  * @category Functions
  * @author      wpdevelop
  *
- * @web-site    http://wpbookingcalendar.com/
+ * @web-site    https://wpbookingcalendar.com/
  * @email       info@wpbookingcalendar.com 
  * @modified    2016-03-17
  */
@@ -95,7 +95,7 @@ function wpbc_create_examples_4_demo( $my_bk_types = array() ){ global $wpdb;
           if ($bookings_count>=20) return;      
 
 
-         $max_num_bookings = 10;                                                        // How many bookings exist  per resource   
+         $max_num_bookings = 5;                                                        // How many bookings exist  per resource
           foreach ($my_bk_types as $resource_id) {                                     // Loop all resources                                        
                 $bk_type  = $resource_id;                                              // Booking Resource
                 $min_days = 2;
@@ -1067,8 +1067,11 @@ function wpbc_get_default_options( $option_name = '', $is_get_multiuser_general_
     // PS
     ////////////////////////////////////////////////////////////////////////////
 
-    if ( class_exists( 'wpdev_bk_personal' ) ) {                                
-        
+    if ( class_exists( 'wpdev_bk_personal' ) ) {
+
+        $default_options['booking_is_use_simple_booking_form'] = 'Off';                                              //FixIn: 8.1.12
+     $mu_option4delete[]='booking_is_use_simple_booking_form';
+
         $default_options['booking_form']        = str_replace( '\\n\\', '', wpbc_get_default_booking_form() );
         $default_options['booking_form_show']   = str_replace( '\\n\\', '', wpbc_get_default_booking_form_show() );
         $default_options['booking_url_bookings_edit_by_visitors'] = site_url();
@@ -1088,7 +1091,7 @@ function wpbc_get_default_options( $option_name = '', $is_get_multiuser_general_
      $mu_option4delete[]='booking_default_title_in_day_for_calendar_view_mode';
         $default_options['booking_default_title_in_day_for_timeline_front_end'] = '[name] [secondname]';
      $mu_option4delete[]='booking_default_title_in_day_for_timeline_front_end';
-        $default_options['booking_is_show_popover_in_timeline_front_end'] = 'Off';
+        $default_options['booking_is_show_popover_in_timeline_front_end'] = ($is_demo) ? 'On' : 'Off';
      $mu_option4delete[]='booking_is_show_popover_in_timeline_front_end';
         $default_options['booking_csv_export_separator'] = ';';
      $mu_option4delete[]='booking_csv_export_separator';   
@@ -1136,7 +1139,7 @@ function wpbc_get_default_options( $option_name = '', $is_get_multiuser_general_
      $mu_option4delete[]='booking_range_selection_start_time';
         $default_options['booking_range_selection_end_time'] = '10:00';
      $mu_option4delete[]='booking_range_selection_end_time';
-        $default_options['booking_change_over_days_triangles'] = 'Off';         //FixIn: 7.0.1.24
+        $default_options['booking_change_over_days_triangles'] = ($is_demo) ? 'On' : 'Off';         					//FixIn: 7.0.1.24
      $mu_option4delete[]='booking_change_over_days_triangles';     
         $default_options['booking_time_format'] = 'H:i';
      $mu_option4delete[]='booking_time_format';

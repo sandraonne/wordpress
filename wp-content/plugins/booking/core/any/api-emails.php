@@ -5,7 +5,7 @@
  * @category    General Emails API Fields for Settings page and Functions for Sending emails.
  * @author      wpdevelop
  *
- * @web-site    http://wpbookingcalendar.com/
+ * @web-site    https://wpbookingcalendar.com/
  * @email       info@wpbookingcalendar.com 
  * @modified    2016-05-12, 2015-10-06
  */

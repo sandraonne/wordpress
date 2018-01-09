@@ -160,7 +160,7 @@ class BookingWidget extends WP_Widget {
 
                     <?php if (!class_exists('wpdev_bk_personal')) { ?>
 
-                            <em><?php printf(__("%sSeveral widgets are supported at %spaid versions%s." ,'booking'),'<span style="">','<a href="http://wpbookingcalendar.com/" target="_blank" style="text-decoration:none;color:#3A5670;">','</a>','</span>'); ?></em>
+                            <em><?php printf(__("%sSeveral widgets are supported at %spaid versions%s." ,'booking'),'<span style="">','<a href="https://wpbookingcalendar.com/" target="_blank" style="text-decoration:none;color:#3A5670;">','</a>','</span>'); ?></em>
 
                     <?php
                     }

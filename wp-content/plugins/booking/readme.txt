@@ -1,19 +1,19 @@
 === Booking Calendar ===
 Contributors: wpdevelop, oplugins
-Donate link: http://wpbookingcalendar.com/buy/
+Donate link: https://wpbookingcalendar.com/buy/
 Tags: booking calendar, availability calendar, ical, booking system, booking form, reservation, events, appointment, availability, schedule, calendar, contact form
 Requires at least: 4.0
 Requires PHP: 5.2.4
 Tested up to: 4.9
-Stable tag: 8.1
+Stable tag: 8.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Booking Calendar plugin - is the ultimate booking system for online reservation and availability checking service for your site.
 
 == Description ==
-Booking Calendar plugin will enable **online booking services** for your site. It's highly supported, *oldest ([since 2009](http://wpbookingcalendar.com/changelog/)) booking wordpress plugin* with **intuitive interface** and **flexible functionality**, which is possible to use in wide range of businesses.
->[Plugin Homepage](http://wpbookingcalendar.com/ "Booking Calendar Homepage") | [Features](http://wpbookingcalendar.com/overview/ "Features") | [Support Forum](http://wpbookingcalendar.com/support/ "Support") | [FAQ](http://wpbookingcalendar.com/faq/ "FAQ on Plugin site") | [Premium Demos](http://wpbookingcalendar.com/demo/ "Live Demos of Premium versions")
+Booking Calendar plugin will enable **online booking services** for your site. It's highly supported, *oldest ([since 2009](https://wpbookingcalendar.com/changelog/)) booking wordpress plugin* with **intuitive interface** and **flexible functionality**, which is possible to use in wide range of businesses.
+>[Plugin Homepage](https://wpbookingcalendar.com/ "Booking Calendar Homepage") | [Features](https://wpbookingcalendar.com/overview/ "Features") | [Support Forum](https://wpbookingcalendar.com/support/ "Support") | [FAQ](https://wpbookingcalendar.com/faq/ "FAQ on Plugin site") | [Premium Demos](https://wpbookingcalendar.com/demo/ "Live Demos of Premium versions")
 
 Your website visitors can **check availability** of **property** *(like apartment, house, hotel room, etc.)* or any **service** you offer and **make a booking** in a minute.
 
@@ -102,7 +102,7 @@ Booking Calendar is built to work out of the box. Just activate it and insert bo
 - **Multi language** support. *(Check all available languages at this [page](http://wordpress.org/extend/plugins/booking/other_notes/ "Translations")).*
 
    
-And **much, much more**... *Please check ton of features in [premium versions](http://wpbookingcalendar.com/overview/ "Booking Calendar Features list") of plugin.*
+And **much, much more**... *Please check ton of features in [premium versions](https://wpbookingcalendar.com/overview/ "Booking Calendar Features list") of plugin.*
 
    
 = BOOKING CALENDAR IS GREAT FOR: =
@@ -130,11 +130,11 @@ Installing the plugin is easy. Just follow these steps:
 
 Installation is complete!
 
-6. Now you can open (create new) post or page and using the "Booking" button in edit toolbar insert the booking shortcode. If you want to insert and configure the shortcode manually, please check  this [instruction](http://wpbookingcalendar.com/help/booking-calendar-shortcodes/)
+6. Now you can open (create new) post or page and using the "Booking" button in edit toolbar insert the booking shortcode. If you want to insert and configure the shortcode manually, please check  this [instruction](https://wpbookingcalendar.com/help/booking-calendar-shortcodes/)
 7. Update (publish) your post or page. Now your web site visitors can make new bookings in the booking form at that page.
 
 That's it! Just configure your settings (Booking --> Settings) and predefined booking form fields (Booking --> Settings --> Fields). 
-If you're unclear about the installation process, check out our [HELP](http://wpbookingcalendar.com/help/) instructions. Still having trouble from there? See the [FAQ](http://wpbookingcalendar.com/faq/) for more troubleshooting ideas or contact [support](http://wpbookingcalendar.com/support/).
+If you're unclear about the installation process, check out our [HELP](https://wpbookingcalendar.com/help/) instructions. Still having trouble from there? See the [FAQ](https://wpbookingcalendar.com/faq/) for more troubleshooting ideas or contact [support](https://wpbookingcalendar.com/support/).
 
 **Important notice:** Because of changes in CSS and JavaScript files, please clear browser cache, after you made this update.
 = Requirements =
@@ -147,7 +147,7 @@ If you're unclear about the installation process, check out our [HELP](http://wp
 
 == Frequently Asked Questions ==
 
-Please see [FAQ](http://wpbookingcalendar.com/faq/).
+Please see [FAQ](https://wpbookingcalendar.com/faq/).
 
 If you have any further questions, please fill free to <a href="mailto:support@wpbookingcalendar.com" title="faq">contact directly</a>.
 
@@ -156,14 +156,16 @@ If you have any further questions, please fill free to <a href="mailto:support@w
 - English
 - Spanish [100% Completed]
 - Galician (Spanish) [100% Completed]
-- Dutch [98% Completed]
-- German [97% Completed]
-- Italian [97% Completed]
-- Danish [97% Completed]
-- Finnish [97% Completed]
-- Swedish [97% Completed]
-- Norwegian [97% Completed]
-- Brazilian Portuguese [97% Completed]
+- Dutch [100% Completed]
+- Finnish [100% Completed]
+- Swedish [100% Completed]
+- Slovenian [100% Completed]
+- Thai [100% Completed]
+- German [96% Completed]
+- Italian [96% Completed]
+- Danish [96% Completed]
+- Norwegian [96% Completed]
+- Brazilian Portuguese [96% Completed]
 - Hebrew [96% Completed]
 - Hungarian [96% Completed]
 - Ukrainian [96% Completed]
@@ -184,13 +186,13 @@ If you have any further questions, please fill free to <a href="mailto:support@w
 - Belarussian [10% Completed]
 
 Please recheck the status of each translation, before using plugin. 
-We open for your help in new translations or correcting existing ones. You can translate to new language or update exist one, using this [tutorial of translation](http://wpbookingcalendar.com/faq/make-translation-of-wp-plugin/)
+We open for your help in new translations or correcting existing ones. You can translate to new language or update exist one, using this [tutorial of translation](https://wpbookingcalendar.com/faq/make-translation-of-wp-plugin/)
 = Tech support =
 
-If you have some questions, which you haven't found at [FAQ](http://wpbookingcalendar.com/faq/) you can post them at [technical help board](http://wpbookingcalendar.com/support/)
+If you have some questions, which you haven't found at [FAQ](https://wpbookingcalendar.com/faq/) you can post them at [technical help board](https://wpbookingcalendar.com/support/)
 = Have New idea? =
 
-Please, fill free for suggesting [new ideas](http://wpbookingcalendar.com/ideas/) or [new features](http://wpbookingcalendar.com/ideas/)
+Please, fill free for suggesting [new ideas](https://wpbookingcalendar.com/ideas/) or [new features](https://wpbookingcalendar.com/ideas/)
 
 == Screenshots ==
 
@@ -208,6 +210,33 @@ Please, fill free for suggesting [new ideas](http://wpbookingcalendar.com/ideas/
 12. **Timeline**. Glance booking checking for a year (3 months or month), at front-end side of your website.
 
 == Changelog ==
+= 8.1.1 =
+- Changes in **all** versions:
+	* **New** Settings > Sync > "General" page,  where possible to define Timezone and assigning form fields for events (its was moved from "Import Google Calendar Events" page,  because these settings also apply for .ics feeds import / export functionality ) (8.1.10)
+    * **Translation** Dutch translation [100% completed] by Boris Hoekmeijer
+    * **Translation** Slovenian translation [100% completed] by Klemen G
+    * **Translation** Finnish translation [100% completed] by Matti Helin
+    * **Translation** Thai translation [100% completed] by Newage Keys
+    * **Translation** Swedish translation [100% completed] by Mikael Göransson
+	* **Fix** showing notice warning in some selectboxes at the settings during editing of some options (8.1.2)
+	* **Fix** removing self closing tag for the textarea and selectbox. Can generate an issue in some systems (issue was only  in the Booking Calendar Free version). (8.1.1.4)
+	* **Fix** showing: "Notice: A non well formed numeric value encountered in .../wpbc-class-timeline.php on line 749 Notice" at some servers. (8.1.6)
+	* **Fix** Issue of showing "unnamed-file.ics" file, if in export relative URL was set term  likes "ics" (8.1.9)
+	* **Fix** Issue of showing link in Timeline in header of dates number (8.1.13)
+	* **Improvement** Updated all links from  http to https of plugin website.
+	* *Under Hood* New constant. WP_BK_AUTO_APPROVE_IF_ADD_IN_ADMIN_PANEL - Auto  approve booking, if booking added in admin panel
+- Changes in **Personal / Business Small / Business Medium / Business Large / MultiUser** versions:
+	* **New** Ability to use **simple booking form** customization from Booking Calendar Free version at the Booking > Settings > Form page. You can activate this option at the Booking > Settings General page in form section. (8.1.12) *(Personal Business Small/Medium/Large, MultiUser)*
+	* **Improvement** * Show warning "Stripe require CURL library in your PHP",  if curl have not installed (8.1.1) *(Business Small/Medium/Large, MultiUser)*
+	* **Improvement** * New default payment form template with  predefined US country  selection  and US states at the Booking > Settings > Form page  (8.1.5) *(Personal, Business Small/Medium/Large, MultiUser)*
+	* **Fix** conflict with paid versions of Booking Calendar with "Gravity Forms" plugin, if in "Gravity Forms" plugin was used "masked input" field(s). In this case in Booking Calendar will not work masked input for start/end times text  field. Its will be used as standard text inputs.  (8.1.5)
+	* **Fix** Removing all new lines from booking details during exporting to  CSV file,  otherwise its can  break CSV template (8.1.3) *(Personal Business Small/Medium/Large, MultiUser)*
+	* **Fix** Issue of not showing PayPal ipn verified email at the Booking > Settings > Payment > PayPal page (after  activation  of this option) (8.1.4) *(Business Small/Medium/Large, MultiUser)*
+	* **Fix** Issue of not ability to select  booking resources at the Calendar Overview page. Its was reseting to  all resources. (8.1.7) *(Personal Business Small/Medium/Large, MultiUser)*
+	* **Fix** Issue of correct replacing shortcodes: [visitorbookingediturl url='some_url'], [visitorbookingcancelurl url='some_url'], [visitorbookingpayurl url='some_url'], if was used severeal  languges and in English  languge was used this shortcode without URL parameter. (8.1.8) *(Personal Business Small/Medium/Large, MultiUser)*
+	* **Fix** Ability to search booking resources in sub tab pages (for example at the Booking > Settings > Sync > "Import Google Calendar Events" page ) (8.1.11) *(Personal Business Small/Medium/Large, MultiUser)*
+	* *Under Hood* New constant. WP_BK_AUTO_SEND_PAY_REQUEST_IF_ADD_IN_ADMIN_PANEL - Auto send payment request, if booking was added in admin panel, and WP_BK_AUTO_APPROVE_IF_ADD_IN_ADMIN_PANEL == true
+
 = 8.1 =
 - Changes in **all** versions:
 	* **New** Ability to define **different structures of booking forms** at Booking > Settings > Form page: "Vertical", "**Side by side**", "Centered", "Dark"
@@ -230,7 +259,6 @@ Please, fill free for suggesting [new ideas](http://wpbookingcalendar.com/ideas/
 	* **Fix** issue of not saving changes during editing, if you try to search some booking resource (or other item), and this booking resource was not at the 1st  page (during usual listing)  (8.0.1.12) *(Personal Business Small/Medium/Large, MultiUser)*
 	* **Fix** issue of incorrect  cost calculation, during editing booking,  when selected days from 1 to 9 and used some rates. Issue relative of not using leading 0 in textarea. (8.0.2.2) *(Business Medium/Large, MultiUser)*
 	* **Fix** issue of showing coupon discount description,  does not depend from uppercase or lowercase of entered coupon code (8.0.2.7) *(Business Large, MultiUser)*
-
 
 = 8.0.1 =
 - Changes in **all** versions:
@@ -570,7 +598,7 @@ Please, fill free for suggesting [new ideas](http://wpbookingcalendar.com/ideas/
     * Underhood. New constant. 'WP_BK_AUTO_APPROVE_WHEN_ZERO_COST'  - Auto  approve booking,  if the cost of booking == 0
     * Underhood. New constant. 'WP_BK_CHECK_LESS_THAN_PARAM_IN_SEARCH' - Check in search results custom fields parameters relative to  less than  in search  form,  and not only equal.
 
-For more information, see the [full release notes](http://wpbookingcalendar.com/changelog/).
+For more information, see the [full release notes](https://wpbookingcalendar.com/changelog/).
 
 == Upgrade Notice ==
 = 8.1 =

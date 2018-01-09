@@ -4,7 +4,7 @@
  * @category Admin Panel - Dashboard functions
  * @author wpdevelop
  *
- * @web-site http://wpbookingcalendar.com/
+ * @web-site https://wpbookingcalendar.com/
  * @email info@wpbookingcalendar.com 
  * 
  * @modified 2016-03-16
@@ -156,13 +156,13 @@ function wpbc_dashboard_widget_show() {
        
        ?><div style="clear:both;margin-bottom:20px;"></div><?php 
        
-       wpbc_dashboard_section_version(); 
+       wpbc_dashboard_section_version();
        
-       wpbc_dashboard_section_support(); 
+       wpbc_dashboard_section_support();
        
        ?><div style="clear:both;"></div><?php 
        
-       wpbc_dashboard_section_news(); 
+       wpbc_dashboard_section_news();
        
        
        ?>
@@ -173,7 +173,7 @@ function wpbc_dashboard_widget_show() {
    
    /*
    <div id="modal_content1" style="display:block;width:100%;height:100px;" class="modal_content_text" >
-     <iframe src="http://wpbookingcalendar.com/purchase/#content" style="border:1px solid red; width:100%;height:100px;padding:0px;margin:0px;"></iframe>
+     <iframe src="https://wpbookingcalendar.com/purchase/#content" style="border:1px solid red; width:100%;height:100px;padding:0px;margin:0px;"></iframe>
    </div>
    */
 }
@@ -308,10 +308,10 @@ function wpbc_dashboard_section_support() {
                 </td>
             </tr>
             <tr>
-                <td style="text-align:center;" class="bk_spec_font"><a target="_blank" href="http://wpbookingcalendar.com/help/"><?php _e('Help Info' ,'booking');?></a></td>
+                <td style="text-align:center;" class="bk_spec_font"><a target="_blank" href="https://wpbookingcalendar.com/help/"><?php _e('Help Info' ,'booking');?></a></td>
             </tr>
             <tr>
-                <td style="text-align:center;" class="bk_spec_font"><a target="_blank" href="http://wpbookingcalendar.com/faq/"><?php _e('FAQ' ,'booking');?></a></td>
+                <td style="text-align:center;" class="bk_spec_font"><a target="_blank" href="https://wpbookingcalendar.com/faq/"><?php _e('FAQ' ,'booking');?></a></td>
             </tr>
             <tr>
                 <td style="text-align:center;" class="bk_spec_font"><a href="mailto:support@wpbookingcalendar.com"><?php _e('Contact email' ,'booking');?></a></td>
@@ -356,7 +356,7 @@ function wpbc_dashboard_section_news() {
 
 /** Dashboard Version Section */
 function wpbc_dashboard_section_version() {
-        
+
     $version = 'free';
     $version = get_bk_version();
     if ( wpbc_is_this_demo() ) 
@@ -370,7 +370,7 @@ function wpbc_dashboard_section_version() {
         <div class="wpbc_dashboard_section border_orrange" id="bk_upgrade_section"> 
             <div style="padding:0px 10px;width:96%;">
                 <h4><?php _e('Upgrade to higher versions' ,'booking') ?>:</h4>
-                <p>Check additional advanced functionality, which exist in higher versions and can be interesting for you <a href="http://wpbookingcalendar.com/overview/" target="_blank">here &raquo;</a></p>
+                <p>Check additional advanced functionality, which exist in higher versions and can be interesting for you <a href="https://wpbookingcalendar.com/overview/" target="_blank">here &raquo;</a></p>
                 <p><a class="button button-primary" style="margin-top: 10px;font-weight: 600;"  href="<?php echo wpbc_up_link(); ?>" target="_blank"><?php if ( wpbc_get_ver_sufix() == '' ) { _e('Purchase' ,'booking'); } else { _e('Upgrade Now' ,'booking'); } ?></a> </p>
             </div>
         </div>
@@ -435,11 +435,11 @@ function wpbc_dashboard_section_version() {
             <tr>
                 <td colspan="2" style="border:none;text-align:center;" class=""><?php 
                     if ($version == 'free') { 
-                        ?><a class="button-primary button" style="font-weight:600;" target="_blank" href="http://wpbookingcalendar.com/overview/"><?php _e('Check Premium Features' ,'booking');?></a><?php                             
+                        ?><a class="button-primary button" style="font-weight:600;" target="_blank" href="https://wpbookingcalendar.com/overview/"><?php _e('Check Premium Features' ,'booking');?></a><?php                             
                     } elseif  ( wpbc_get_ver_sufix() != '' )  { 
                         ?><a class="button-primary button"  href="<?php echo wpbc_get_settings_url(); ?>&tab=upgrade"><?php _e('Upgrade' ,'booking');?></a><?php                                                             
                     } else {
-                        ?><a class="button-primary button" target="_blank" href="http://wpbookingcalendar.com/overview/"><?php _e('Explore Premium Features' ,'booking');?></a><?php                                                             
+                        ?><a class="button-primary button" target="_blank" href="https://wpbookingcalendar.com/overview/"><?php _e('Explore Premium Features' ,'booking');?></a><?php                                                             
                     }
               ?></td>
             </tr>

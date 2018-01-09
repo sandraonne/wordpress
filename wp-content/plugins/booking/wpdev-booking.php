@@ -1,13 +1,13 @@
 <?php
 /*
 Plugin Name: Booking Calendar
-Plugin URI: http://wpbookingcalendar.com/demo/
+Plugin URI: https://wpbookingcalendar.com/demo/
 Description: Online reservation and availability checking service for your site.
 Author: wpdevelop, oplugins
-Author URI: http://wpbookingcalendar.com/
+Author URI: https://wpbookingcalendar.com/
 Text Domain: booking 
 Domain Path: /languages/
-Version: 8.1
+Version: 8.1.1
 */
 
 /*  Copyright 2009 - 2017  www.wpbookingcalendar.com  (email: info@wpbookingcalendar.com),

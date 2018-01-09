@@ -4,7 +4,7 @@
  * @category Toolbar. Data for UI Elements at Booking Calendar admin pages
  * @author wpdevelop
  *
- * @web-site http://wpbookingcalendar.com/
+ * @web-site https://wpbookingcalendar.com/
  * @email info@wpbookingcalendar.com 
  * 
  * @modified 2015-11-16
@@ -421,7 +421,7 @@ function wpbc_toolbar_search_by_id_bookings() {
 
 /** Help   -   Drop Down Menu  -  T a b  */
 function wpbc_bs_dropdown_menu_help() {
-    
+
     wpbc_bs_dropdown_menu( array( 
                                         'title' => __( 'Help', 'booking' ) 
                                       , 'font_icon' => 'glyphicon glyphicon-question-sign'
@@ -429,9 +429,9 @@ function wpbc_bs_dropdown_menu_help() {
                                       , 'items' => array( 
                                                array( 'type' => 'link', 'title' => "What's New"/*__('Get Started')*/, 'url' => esc_url( admin_url( add_query_arg( array( 'page' => 'wpbc-about' ), 'index.php' ) ) ) )
                                              , array( 'type' => 'divider' )
-                                             , array( 'type' => 'link', 'title' => __('Help', 'booking'), 'url' => 'http://wpbookingcalendar.com/help/' )
-                                             , array( 'type' => 'link', 'title' => __('FAQ', 'booking'), 'url' => 'http://wpbookingcalendar.com/faq/' )
-                                             , array( 'type' => 'link', 'title' => __('Technical Support', 'booking'), 'url' => 'http://wpbookingcalendar.com/support/' )
+                                             , array( 'type' => 'link', 'title' => __('Help', 'booking'), 'url' => 'https://wpbookingcalendar.com/help/' )
+                                             , array( 'type' => 'link', 'title' => __('FAQ', 'booking'), 'url' => 'https://wpbookingcalendar.com/faq/' )
+                                             , array( 'type' => 'link', 'title' => __('Technical Support', 'booking'), 'url' => 'https://wpbookingcalendar.com/support/' )
                                              , array( 'type' => 'divider' )
                                              , array( 'type' => 'link', 'title' => __('About Booking Calendar', 'booking'), 'url' => wpbc_up_link()
                                                                         , 'attr' => array(
@@ -2122,7 +2122,7 @@ function wpbc_toolbar_search_by_id__top_form( $params ) {
         
     
     $exclude_params         = array();                                          //array('page_num', 'orderby', 'order');  - if using "only_these_parameters",  then this parameter does NOT require
-    $only_these_parameters  = array( 'page', 'tab', $params[ 'search_get_key' ] );
+    $only_these_parameters  = array( 'page', 'tab', 'subtab', $params[ 'search_get_key' ] );        //FixIn: 8.1.11	-	added , 'subtab'	- ability to  search  booking resources in sub tab  pages in settings
     $wpbc_admin_url = wpbc_get_params_in_url( wpbc_get_bookings_url( false, false ), $exclude_params, $only_these_parameters );
     
     

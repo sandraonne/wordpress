@@ -6,7 +6,7 @@
  * @category Execure Recurent Actions
  * 
  * @author wpdevelop
- * @link http://wpbookingcalendar.com/
+ * @link https://wpbookingcalendar.com/
  * @email info@wpbookingcalendar.com
  *
  * @modified 2014.09.02

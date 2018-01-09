@@ -37,8 +37,8 @@
             return {
                 longname: "wpdevelop",
                 author: 'wpdevelop',
-                authorurl: 'http://wpbookingcalendar.com',
-                infourl: 'http://wpbookingcalendar.com',
+                authorurl: 'https://wpbookingcalendar.com',
+                infourl: 'https://wpbookingcalendar.com',
                 version: "1.0"
             };
         }

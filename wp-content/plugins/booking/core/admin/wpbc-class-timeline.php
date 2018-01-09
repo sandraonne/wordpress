@@ -4,7 +4,7 @@
  * @category Timeline for Admin Panel
  * @author wpdevelop
  *
- * @web-site http://wpbookingcalendar.com/
+ * @web-site https://wpbookingcalendar.com/
  * @email info@wpbookingcalendar.com 
  * 
  * @modified 2016-01-18
@@ -735,6 +735,8 @@ class WPBC_Timeline {
                 $my_time_index = explode( ':', $my_time );
                 $my_time_index = (int) ($my_time_index[0] * 60 * 60 + $my_time_index[1] * 60 + $my_time_index[2]);
 
+                $my_time = strtotime( $my_time );                     //FixIn: 8.1.6
+
                 if ( !isset( $time_array[$my_date] ) ) {
                     $time_array[$my_date] = array( $my_time_index => array( $my_time => array( 'id' => $bk->booking_id, 'resource' => $date_bk_res_id ) ) );
                 } else {
@@ -1158,11 +1160,15 @@ class WPBC_Timeline {
                                 if ($month_title != '') { 
                                     ?><div class="month_year"><?php echo $month_title .', ' . $yy ;?></div><?php 
                                 }
-                                if ( ( $view_days_num==30 ) || ( $view_days_num == 60) ) { 
-                                    
-                                    ?><a href='<?php echo $bk_admin_url_today . '&scroll_start_date=' . $yy . '-' . $mm . '-' . $dd ; ?>'>
-                                        <div class="day_num day_num<?php echo $d_inc ?>"><?php echo $day_title;?></div>
-                                    </a><?php                                 
+                                if ( ( $view_days_num==30 ) || ( $view_days_num == 60) ) {
+
+                                	if ( ! $this->is_frontend ) {
+		                                ?><a href='<?php echo $bk_admin_url_today . '&scroll_start_date=' . $yy . '-' . $mm . '-' . $dd; ?>'><?php
+	                                }
+											?> <div class="day_num day_num<?php echo $d_inc ?>"><?php echo $day_title;?></div><?php
+									if ( ! $this->is_frontend ) {
+										?></a><?php
+									}
                                     
                                 } else {
                                     ?><div class="day_num day_num<?php echo $d_inc ?>"><?php echo $day_title;?></div><?php

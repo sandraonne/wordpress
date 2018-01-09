@@ -5,7 +5,7 @@
  * @category    Settings API
  * @author      wpdevelop
  *
- * @web-site    http://wpbookingcalendar.com/
+ * @web-site    https://wpbookingcalendar.com/
  * @email       info@wpbookingcalendar.com 
  * @modified    2016-02-24
  */
@@ -251,16 +251,24 @@ class  WPBC_Settings_API_General extends WPBC_Settings_API {
                                     , 'group'       => 'form'
                             );
 		*/
-
-        $this->fields['booking_is_use_captcha'] = array(   
+		if ( class_exists( 'wpdev_bk_personal' ) )                                                                      //FixIn: 8.1.12
+            $this->fields['booking_is_use_simple_booking_form'] = array(
                                 'type'          => 'checkbox'
-                                , 'default'     => $default_options_values['booking_is_use_captcha']           //'Off'            
+                                , 'default'     => $default_options_values['booking_is_use_simple_booking_form']        //'Off'
+                                , 'title'       => __('Simple' ,'booking') . ' ' . __('Booking Form', 'booking')
+                                , 'label'       => __('Check the box, if you want to use simple booking form customization from Free plugin version at Settings - Form page.' ,'booking')
+                                , 'description' => ''
+                                , 'group'       => 'form'
+            );       
+        $this->fields['booking_is_use_captcha'] = array(
+                                'type'          => 'checkbox'
+                                , 'default'     => $default_options_values['booking_is_use_captcha']           //'Off'
                                 , 'title'       => __('CAPTCHA' ,'booking')
                                 , 'label'       => __('Check the box to activate CAPTCHA inside the booking form.' ,'booking')
                                 , 'description' => ''
                                 , 'group'       => 'form'
-            );       
-        $this->fields['booking_is_use_autofill_4_logged_user'] = array(   
+            );
+        $this->fields['booking_is_use_autofill_4_logged_user'] = array(
                                 'type'          => 'checkbox'
                                 , 'default'     => $default_options_values['booking_is_use_autofill_4_logged_user']         // 'Off'            
                                 , 'title'       => __('Auto-fill fields' ,'booking')

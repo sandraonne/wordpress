@@ -4,7 +4,7 @@
  * @category JavaScript files and varibales
  * @author wpdevelop
  *
- * @web-site http://wpbookingcalendar.com/
+ * @web-site https://wpbookingcalendar.com/
  * @email info@wpbookingcalendar.com 
  * 
  * @modified 19.10.2015
@@ -80,8 +80,8 @@ function wpbc_js_load_vars( $where_to_load ) {
     ////////////////////////////////////////////////////////////////////////////
     // JavaScripts Variables               
     ////////////////////////////////////////////////////////////////////////////
-      
-    wp_enqueue_script( 'wpbc-global-vars', wpbc_plugin_url( '/js/wpbc_vars.js' ), array( 'jquery' ), '1.1' );        // Blank JS File 
+
+    wp_enqueue_script( 'wpbc-global-vars', wpbc_plugin_url( '/js/wpbc_vars.js' ), array( 'jquery' ), WP_BK_VERSION_NUM );        // Blank JS File
         
     wp_localize_script( 'wpbc-global-vars'
                       , 'wpbc_global1', array(
@@ -207,17 +207,18 @@ function wpbc_js_load_files( $where_to_load ) {
     if (  ( $where_to_load == 'client' ) || ( wpbc_is_new_booking_page()  )   ) {
         
         // Client
-        wp_enqueue_script( 'wpbc-main-client', wpbc_plugin_url( '/js/client.js'), array( 'wpbc-datepick' ), '1.1');
+        wp_enqueue_script( 'wpbc-main-client', wpbc_plugin_url( '/js/client.js'),       array( 'wpbc-datepick' ), WP_BK_VERSION_NUM);
+        // wp_enqueue_script( 'wpbc-times',       wpbc_plugin_url( '/js/wpbc_times.js'),   array( 'wpbc-main-client' ), WP_BK_VERSION_NUM);         //FixIn: TimeFree
     }
     
     if ( $where_to_load == 'admin' ) {
         
         // Admin
-        wp_enqueue_script( 'wpbc-admin-main',    wpbc_plugin_url( '/js/admin.js'), array( 'wpbc-global-vars' ), '1.1');
-        wp_enqueue_script( 'wpbc-admin-support', wpbc_plugin_url( '/core/any/js/admin-support.js'), array( 'wpbc-global-vars' ), '1.1');
+        wp_enqueue_script( 'wpbc-admin-main',    wpbc_plugin_url( '/js/admin.js'), array( 'wpbc-global-vars' ), WP_BK_VERSION_NUM );
+        wp_enqueue_script( 'wpbc-admin-support', wpbc_plugin_url( '/core/any/js/admin-support.js'), array( 'wpbc-global-vars' ), WP_BK_VERSION_NUM );
     
         // Chosen Library    
-        wp_enqueue_script( 'wpbc-chosen', wpbc_plugin_url( '/assets/libs/chosen/chosen.jquery.min.js'), array( 'wpbc-global-vars' ), '1.1' );    
+        wp_enqueue_script( 'wpbc-chosen', wpbc_plugin_url( '/assets/libs/chosen/chosen.jquery.min.js'), array( 'wpbc-global-vars' ), WP_BK_VERSION_NUM );
     }    
         
 }
@@ -241,13 +242,13 @@ function wpbc_load_calendar_localization_file() {
 
         if (   ( $locale_lang !== 'en') && ( wpbc_is_file_exist( '/js/datepick/jquery.datepick-' . $locale_lang . '.js' ) )   ) { 
             
-                wp_enqueue_script( 'wpbc-datepick-localize', wpbc_plugin_url( '/js/datepick/jquery.datepick-'. $locale_lang . '.js' ), array( 'wpbc-datepick' ), '1.1');
+                wp_enqueue_script( 'wpbc-datepick-localize', wpbc_plugin_url( '/js/datepick/jquery.datepick-'. $locale_lang . '.js' ), array( 'wpbc-datepick' ), WP_BK_VERSION_NUM );
 
         } else if (   ( ! in_array( $locale, array( 'en_US', 'en_CA', 'en_GB', 'en_AU' ) )   )                                      // English Exceptions 
                    && ( wpbc_is_file_exist( '/js/datepick/jquery.datepick-'. $locale_country . '.js' ) ) 
         ) { 
 
-                wp_enqueue_script( 'wpbc-datepick-localize', wpbc_plugin_url( '/js/datepick/jquery.datepick-'. $locale_country . '.js' ), array( 'wpbc-datepick' ), '1.1');                
+                wp_enqueue_script( 'wpbc-datepick-localize', wpbc_plugin_url( '/js/datepick/jquery.datepick-'. $locale_country . '.js' ), array( 'wpbc-datepick' ), WP_BK_VERSION_NUM );
         }          
     }
 }*/

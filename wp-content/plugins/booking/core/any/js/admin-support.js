@@ -5,7 +5,7 @@
  * @category Scripts 
  * @author wpdevelop
  *
- * @web-site http://wpbookingcalendar.com/
+ * @web-site https://wpbookingcalendar.com/
  * @email info@wpbookingcalendar.com 
  * 
  * @modified 2015-04-09
@@ -700,7 +700,7 @@ function wpbc_dismiss_window(us_id,  window_id ){
             url: wpbc_ajaxurl,
             type:'POST',
             success: function (data, textStatus){if( textStatus == 'success')   jQuery('#ajax_respond').html( data );},
-            error:function (XMLHttpRequest, textStatus, errorThrown){window.status = 'Ajax sending Error status:'+ textStatus;alert(XMLHttpRequest.status + ' ' + XMLHttpRequest.statusText);if (XMLHttpRequest.status == 500) {alert('Please check at this page according this error:' + ' http://wpbookingcalendar.com/faq/#ajax-sending-error');}},
+            error:function (XMLHttpRequest, textStatus, errorThrown){window.status = 'Ajax sending Error status:'+ textStatus;alert(XMLHttpRequest.status + ' ' + XMLHttpRequest.statusText);if (XMLHttpRequest.status == 500) {alert('Please check at this page according this error:' + ' https://wpbookingcalendar.com/faq/#ajax-sending-error');}},
             // beforeSend: someFunction,
             data:{
                 //ajax_action : 'USER_SAVE_WINDOW_STATE',

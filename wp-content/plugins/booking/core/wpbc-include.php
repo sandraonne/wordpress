@@ -6,7 +6,7 @@
  * @category Bookings
  * 
  * @author wpdevelop
- * @link http://wpbookingcalendar.com/
+ * @link https://wpbookingcalendar.com/
  * @email info@wpbookingcalendar.com
  *
  * @modified 29.09.2015
@@ -68,8 +68,9 @@ if ( file_exists( WPBC_PLUGIN_DIR.'/inc/_ps/personal.php' ) ){
     require_once( WPBC_PLUGIN_DIR . '/core/admin/page-email-deny.php' );        // Email - Deny - set  pending
     require_once( WPBC_PLUGIN_DIR . '/core/admin/page-email-trash.php' );       // Email - Trash
     require_once( WPBC_PLUGIN_DIR . '/core/admin/page-email-deleted.php' );     // Email - Deleted - completely  erase
-	require_once( WPBC_PLUGIN_DIR . '/core/admin/page-ics-import.php' );      // Import ICS Help Settings page			//FixIn: 8.0
-	require_once( WPBC_PLUGIN_DIR . '/core/admin/page-ics-export.php' );      // Export ICS Feeds Settings page			//FixIn: 8.0
+	require_once( WPBC_PLUGIN_DIR . '/core/admin/page-ics-general.php' );		// General ICS Help Settings page		    //FixIn: 8.1.10
+	require_once( WPBC_PLUGIN_DIR . '/core/admin/page-ics-import.php' );        // Import ICS Help Settings page			//FixIn: 8.0
+	require_once( WPBC_PLUGIN_DIR . '/core/admin/page-ics-export.php' );        // Export ICS Feeds Settings page			//FixIn: 8.0
     require_once( WPBC_PLUGIN_DIR . '/core/admin/page-import-gcal.php' );       // Import from  Google Calendar Settings page 
 }
 

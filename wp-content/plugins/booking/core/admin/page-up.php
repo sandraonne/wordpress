@@ -4,7 +4,7 @@
  * @category Content of Up page
  * @author wpdevelop
  *
- * @web-site http://wpbookingcalendar.com/
+ * @web-site https://wpbookingcalendar.com/
  * @email info@wpbookingcalendar.com
  *
  * @modified 2017-10-16
@@ -36,7 +36,7 @@ class WPBC_Page_SettingsUp extends WPBC_Page_Structure {
 
 		$tabs[ 'upgrade' ] = array(
 			'title' => __( 'Upgrade', 'booking')                     // Title of TAB
-		, 'page_title' => ''//sprintf( __( 'Need even more functionality? Check %s higher versions %s','booking'), '', '<a href="http://wpbookingcalendar.com/overview/" target="_blank" style="text-decoration: none;font-size:0.9em;">&gt;&gt;&gt;</a>' )                // Title of Page
+		, 'page_title' => ''//sprintf( __( 'Need even more functionality? Check %s higher versions %s','booking'), '', '<a href="https://wpbookingcalendar.com/overview/" target="_blank" style="text-decoration: none;font-size:0.9em;">&gt;&gt;&gt;</a>' )                // Title of Page
 		, 'hint' => ''                      // Hint
 		, 'link' => ''                      // Can be skiped,  then generated link based on Page and Tab tags. Or can  be extenral link
 		, 'position' => 'right'             // 'left'  ||  'right'  ||  ''
@@ -55,7 +55,7 @@ class WPBC_Page_SettingsUp extends WPBC_Page_Structure {
 
 		$this->css();
 		?>
-		<div class="wpbc_redirection_message">Redirection to <a href="http://wpbookingcalendar.com/overview/#content">Booking Calendar website</a> after <span class="wpbc_countdown">5</span> seconds...</div>
+		<div class="wpbc_redirection_message">Redirection to <a href="https://wpbookingcalendar.com/overview/#content">Booking Calendar website</a> after <span class="wpbc_countdown">5</span> seconds...</div>
 		<script type="text/javascript">
 
 			var count = 5;
@@ -65,7 +65,7 @@ class WPBC_Page_SettingsUp extends WPBC_Page_Structure {
 					jQuery( ".wpbc_countdown" ).html( count );
 					if ( count == 0 ){
 						clearInterval( countdown );
-						window.location.href = "http://wpbookingcalendar.com/overview/#content";
+						window.location.href = "https://wpbookingcalendar.com/overview/#content";
 						//window.open( 'http://google.com', "_self" );
 					}
 			        count--;
@@ -74,7 +74,7 @@ class WPBC_Page_SettingsUp extends WPBC_Page_Structure {
 		</script>
 		<?php
 		do_action( 'wpbc_premium_content_overview' );
-		//wpbc_redirect( 'http://wpbookingcalendar.com/overview/#content' );
+		//wpbc_redirect( 'https://wpbookingcalendar.com/overview/#content' );
 	}
 
 	public function css(){

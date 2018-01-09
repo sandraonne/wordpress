@@ -6,7 +6,7 @@
  * @category Alerts
  * 
  * @author wpdevelop
- * @link http://wpbookingcalendar.com/
+ * @link https://wpbookingcalendar.com/
  * @email info@wpbookingcalendar.com
  *
  * @modified 2014.10.17
@@ -24,7 +24,7 @@ class WPBC_Notices {
         
         $this->messages['updated_paid_to_free'] = '<strong>'. __('Warning!' ,'booking') . '</strong> ' 
                                                 . sprintf( __('Probabaly you updated your paid version of Booking Calendar by free version or update process failed. You can request the new update of your paid version at %1sthis page%2s.')
-                                                           , '<a href="http://wpbookingcalendar.com/request-update/" target="_blank">', '</a>' );
+                                                           , '<a href="https://wpbookingcalendar.com/request-update/" target="_blank">', '</a>' );
         $this->hooks();
     }
 

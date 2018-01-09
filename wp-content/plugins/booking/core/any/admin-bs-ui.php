@@ -4,7 +4,7 @@
  * @category Toolbar. BS UI Elements for Admin Panel.
  * @author wpdevelop
  *
- * @web-site http://wpbookingcalendar.com/
+ * @web-site https://wpbookingcalendar.com/
  * @email info@wpbookingcalendar.com 
  * 
  * @modified 2015-11-14
@@ -1506,14 +1506,14 @@ wpbc_dropdown_menu( array(
                          , 'font_icon' => 'glyphicon glyphicon-question-sign'
                          , 'position' => 'right'
                          , 'items' => array( 
-                                             array( 'type' => 'link', 'title' => __('About Plugin', 'booking'), 'url' => 'http://wpbookingcalendar.com /' )
+                                             array( 'type' => 'link', 'title' => __('About Plugin', 'booking'), 'url' => 'https://wpbookingcalendar.com /' )
                                            , array( 'type' => 'divider' )
                                            , array( 'type' => 'text', 'title' => __('Text', 'booking') )
-                                           , array( 'type' => 'link', 'title' => __('Help', 'booking'), 'url' => 'http://wpbookingcalendar.com/help/' )
-                                           , array( 'type' => 'link', 'title' => __('FAQ', 'booking'), 'url' => 'http://wpbookingcalendar.com/faq/' )
-                                           , array( 'type' => 'link', 'title' => __('Technical Support', 'booking'), 'url' => 'http://wpbookingcalendar.com/support/' )
+                                           , array( 'type' => 'link', 'title' => __('Help', 'booking'), 'url' => 'https://wpbookingcalendar.com/help/' )
+                                           , array( 'type' => 'link', 'title' => __('FAQ', 'booking'), 'url' => 'https://wpbookingcalendar.com/faq/' )
+                                           , array( 'type' => 'link', 'title' => __('Technical Support', 'booking'), 'url' => 'https://wpbookingcalendar.com/support/' )
                                            , array( 'type' => 'divider' )
-                                           , array( 'type' => 'link', 'title' => __('Upgrade Now', 'booking'), 'url' => 'http://wpbookingcalendar.com/', 'style' => 'font-weight: 600;' , 'attr' => array( 'target' => '_blank' ) )
+                                           , array( 'type' => 'link', 'title' => __('Upgrade Now', 'booking'), 'url' => 'https://wpbookingcalendar.com/', 'style' => 'font-weight: 600;' , 'attr' => array( 'target' => '_blank' ) )
                                       )
                   ) ); 
  * 

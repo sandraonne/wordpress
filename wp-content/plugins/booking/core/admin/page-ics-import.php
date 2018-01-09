@@ -5,7 +5,7 @@
  * @category    Settings API
  * @author      wpdevelop
  *
- * @web-site    http://wpbookingcalendar.com/
+ * @web-site    https://wpbookingcalendar.com/
  * @email       info@wpbookingcalendar.com 
  * @modified    2017-07-09
  * 
@@ -65,7 +65,7 @@ class WPBC_Page_SettingsImportFeeds extends WPBC_Page_Structure {
                             , 'css_classes' => ''                               // CSS class(es)
                             //, 'icon' => 'http://.../icon.png'                 // Icon - link to the real PNG img
                             //, 'font_icon' => 'glyphicon glyphicon-envelope'   // CSS definition of Font Icon
-                            , 'default' =>  true                                // Is this sub tab activated by default or not: true || false. 
+                            , 'default' =>  ! true                                // Is this sub tab activated by default or not: true || false.		//FixIn: 8.1.10
                             , 'disabled' => false                               // Is this sub tab deactivated: true || false. 
                             , 'checkbox'  => false                              // or definition array  for specific checkbox: array( 'checked' => true, 'name' => 'feature1_active_status' )   //, 'checkbox'  => array( 'checked' => $is_checked, 'name' => 'enabled_active_status' )
                             , 'content' => 'content'                            // Function to load as conten of this TAB
@@ -560,7 +560,7 @@ function wpbc_ics_import_export__show_help_info( $is_import = true ) {
 			<li><?php 
 				printf( __( 'Insert %s shortcode into  some post(s) or page(s). Check more info about this %sshortcode configuration%s', 'booking' ) 
 				, '<code>[booking-manager-import ...]</code>'
-				, '<a target="_blank" href="http://wpbookingcalendar.com/help/booking-manager/">' 
+				, '<a target="_blank" href="https://wpbookingcalendar.com/help/booking-manager/">' 
 				, '</a>'
 				);
 			?>.
@@ -570,7 +570,7 @@ function wpbc_ics_import_export__show_help_info( $is_import = true ) {
 					$message_ics = sprintf( __( 'Using such shortcodes in pages give a great flexibility to import from  different .ics feeds (sources) into the same resource.%sAlso  its possible to define different CRON parameters for accessing such different pages with  different time intervals.', 'booking' )
 											, '<br/>'
 											);
-					$message_ics = str_replace( array( '.ics', 'CRON' ), array( '<strong>.ics</strong>', '<a target="_blank" href="http://wpbookingcalendar.com/help/cron/"><strong>CRON</strong></a>' ), $message_ics );
+					$message_ics = str_replace( array( '.ics', 'CRON' ), array( '<strong>.ics</strong>', '<a target="_blank" href="https://wpbookingcalendar.com/help/cron/"><strong>CRON</strong></a>' ), $message_ics );
 					echo $message_ics; 					 
 				?>					
 				</div>
@@ -586,7 +586,7 @@ function wpbc_ics_import_export__show_help_info( $is_import = true ) {
 					$message_ics = sprintf( __( 'If you have inserted import shortcodes from %s, then  you can configure your CRON for periodically access these pages and import .ics feeds.', 'booking' )
 											, '<a target="_blank" href="https://wordpress.org/plugins/booking-manager/"><strong>Booking Manager</strong></a> <code>[booking-manager-import ...]</code>'
 										);
-					$message_ics = str_replace( array( '.ics', 'CRON' ), array( '<strong>.ics</strong>', '<a target="_blank" href="http://wpbookingcalendar.com/help/cron/"><strong>CRON</strong></a>' ), $message_ics );
+					$message_ics = str_replace( array( '.ics', 'CRON' ), array( '<strong>.ics</strong>', '<a target="_blank" href="https://wpbookingcalendar.com/help/cron/"><strong>CRON</strong></a>' ), $message_ics );
 					echo $message_ics; 
 				?>											
 			</li>

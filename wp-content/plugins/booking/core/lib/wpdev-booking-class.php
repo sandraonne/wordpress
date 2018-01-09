@@ -492,7 +492,7 @@ class wpdev_booking {
         
         $booking_is_show_powered_by_notice = get_bk_option( 'booking_is_show_powered_by_notice' );          
         if ( (!class_exists('wpdev_bk_personal')) && ($booking_is_show_powered_by_notice == 'On') )
-            $calendar .= '<div style="font-size:9px;text-align:left;margin-top:3px;">Powered by <a style="font-size:9px;" href="http://wpbookingcalendar.com" target="_blank">WP Booking Calendar</a></div>';
+            $calendar .= '<div style="font-size:9px;text-align:left;margin-top:3px;">Powered by <a style="font-size:9px;" href="https://wpbookingcalendar.com" target="_blank">WP Booking Calendar</a></div>';
                 
         $calendar .= '<textarea id="date_booking'.$bk_type.'" name="date_booking'.$bk_type.'" autocomplete="off" style="display:none;"></textarea>';   // Calendar code
         
@@ -852,7 +852,7 @@ class wpdev_booking {
                                                        sprintf( esc_js( __('%sWarning! Booking calendar for this booking resource are already at the page, please check more about this issue at %sthis page%s' ,'booking') )
                                                                 , ''
                                                                 , ''
-                                                                , ': http://wpbookingcalendar.com/faq/why-the-booking-calendar-widget-not-show-on-page/'                                                            
+                                                                , ': https://wpbookingcalendar.com/faq/why-the-booking-calendar-widget-not-show-on-page/'                                                            
                                                         ) 
                                                 .'</span>";                                                                                                  
                                               jQuery("#'.$my_random_id.'").animate( {opacity: 1}, 10000 ).fadeOut(5000);
@@ -1192,7 +1192,7 @@ class wpdev_booking {
         } else {
             return __('You do not set any parameters for booking editing' ,'booking')
                     . ' <br/><em>' 
-                        . sprintf( __('Please check more about configuration at  %sthis page%s' ,'booking') , '<a href="http://wpbookingcalendar.com/faq/configure-editing-cancel-payment-bookings-for-visitors/" target="_blank">' , '</a>.') 
+                        . sprintf( __('Please check more about configuration at  %sthis page%s' ,'booking') , '<a href="https://wpbookingcalendar.com/faq/configure-editing-cancel-payment-bookings-for-visitors/" target="_blank">' , '</a>.') 
                     . '</em>';
         }
         if ( isset( $attr['options'] ) ) { $bk_otions = $attr['options']; }

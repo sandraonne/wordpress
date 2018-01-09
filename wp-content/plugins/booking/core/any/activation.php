@@ -5,7 +5,7 @@
  * @category Installation 
  * @author wpdevelop
  *
- * @web-site http://wpbookingcalendar.com/
+ * @web-site https://wpbookingcalendar.com/
  * @email info@wpbookingcalendar.com 
  * 
  * @modified 2015-04-09, 2016-03-17
@@ -116,11 +116,11 @@ abstract class WPBC_Install {
             [$plugin_data] => Array
                 (
                     [Name] => Booking Calendar
-                    [PluginURI] => http://wpbookingcalendar.com/demo/
+                    [PluginURI] => https://wpbookingcalendar.com/demo/
                     [Version] => 2.8.35
                     [Description] => Online booking and availability checking service for your site.
                     [Author] => wpdevelop
-                    [AuthorURI] => http://wpbookingcalendar.com/
+                    [AuthorURI] => https://wpbookingcalendar.com/
                     [TextDomain] =>
                     [DomainPath] =>
                     [Network] =>

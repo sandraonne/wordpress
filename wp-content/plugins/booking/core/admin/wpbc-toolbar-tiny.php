@@ -6,7 +6,7 @@
  * @category Bookings
  * 
  * @author wpdevelop
- * @link http://wpbookingcalendar.com/
+ * @link https://wpbookingcalendar.com/
  * @email info@wpbookingcalendar.com
  *
  * @modified 29.09.2015
@@ -831,7 +831,7 @@ Parameters for possible usage of shortcode:
                                                                 'type' => 'html'
                                                               , 'html'  =>  wpbc_show_message_in_settings( 
                                                                                       '<strong style="padding-left: 2em;line-height:2em;">'
-                                                                                    . sprintf( __( 'Please read more about the possible customizations of these %soptions%s %shere%s', 'booking' ), '<strong>', '</strong>', '<a href="http://wpbookingcalendar.com/help/booking-calendar-shortcodes/" target="_blank">', '</a>' )
+                                                                                    . sprintf( __( 'Please read more about the possible customizations of these %soptions%s %shere%s', 'booking' ), '<strong>', '</strong>', '<a href="https://wpbookingcalendar.com/help/booking-calendar-shortcodes/" target="_blank">', '</a>' )
                                                                                     . '</strong>'
                                                                                     . '<ol style="list-style-type:disc;line-height:2em;">'
                                                                                     . '<li>'
@@ -853,8 +853,8 @@ Parameters for possible usage of shortcode:
                                                                   
                                                                                     . '<li>'                                                                      
                                                                                     . sprintf(__('Please, read more about the shortcodes %shere%s or JavaScript customization of the specific shortcodes %shere%s' ,'booking')
-                                                                                                , '<a href="http://wpbookingcalendar.com/help/booking-calendar-shortcodes/" target="_blank">', '</a>'
-                                                                                                , '<a href="http://wpbookingcalendar.com/faq/advanced-javascript-for-the-booking-shortcodes/" target="_blank">','</a>')
+                                                                                                , '<a href="https://wpbookingcalendar.com/help/booking-calendar-shortcodes/" target="_blank">', '</a>'
+                                                                                                , '<a href="https://wpbookingcalendar.com/faq/advanced-javascript-for-the-booking-shortcodes/" target="_blank">','</a>')
                                                                                     . '</li>'
                                                                                     . '</ol>'
                                                                                 , 'warning', '', false )
@@ -1061,7 +1061,7 @@ Parameters for possible usage of shortcode:
                                                                 'type' => 'html'
                                                               , 'html'  =>  wpbc_show_message_in_settings( 
                                                                                       '<strong style="padding-left: 2em;line-height:2em;">'
-                                                                                    . sprintf( __( 'Please read more about the possible customizations of these %soptions%s %shere%s', 'booking' ), '<strong>', '</strong>', '<a href="http://wpbookingcalendar.com/help/booking-calendar-shortcodes/" target="_blank">', '</a>' )
+                                                                                    . sprintf( __( 'Please read more about the possible customizations of these %soptions%s %shere%s', 'booking' ), '<strong>', '</strong>', '<a href="https://wpbookingcalendar.com/help/booking-calendar-shortcodes/" target="_blank">', '</a>' )
                                                                                     . '</strong>'
                                                                                     . '<ol style="list-style-type:disc;line-height:2em;">'
                                                                                     . '<li>'
@@ -1385,7 +1385,7 @@ Parameters for possible usage of shortcode:
                                                                 'type' => 'html'
                                                               , 'html'  =>  wpbc_show_message_in_settings( 
                                                                                       '<strong style="padding-left: 2em;line-height:2em;">'
-                                                                                    . sprintf( __( 'Please read more about the possible customizations of these %soptions%s %shere%s', 'booking' ), '<strong>', '</strong>', '<a href="http://wpbookingcalendar.com/help/booking-calendar-shortcodes/" target="_blank">', '</a>' )
+                                                                                    . sprintf( __( 'Please read more about the possible customizations of these %soptions%s %shere%s', 'booking' ), '<strong>', '</strong>', '<a href="https://wpbookingcalendar.com/help/booking-calendar-shortcodes/" target="_blank">', '</a>' )
                                                                                     . '</strong>'
                                                                                     . '<ol style="list-style-type:disc;line-height:2em;">'
                                                                                     . '<li>'

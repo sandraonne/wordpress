@@ -6,7 +6,7 @@
  * @category Data Sync
  * 
  * @author wpdevelop
- * @link http://wpbookingcalendar.com/
+ * @link https://wpbookingcalendar.com/
  * @email info@wpbookingcalendar.com
  *
  * @modified 2014.06.27
@@ -502,12 +502,12 @@ function wpbc_sync_gcal_activate() {
     add_bk_option( 'booking_gcal_events_until_offset_type' , '' );
     add_bk_option( 'booking_gcal_events_max', '25');
     add_bk_option( 'booking_gcal_api_key', '');
-    add_bk_option( 'booking_gcal_timezone','');
+    	add_bk_option( 'booking_gcal_timezone','');
     add_bk_option( 'booking_gcal_is_send_email' , 'Off' );
     add_bk_option( 'booking_gcal_auto_import_is_active' , 'Off'  );
     add_bk_option( 'booking_gcal_auto_import_time', '24' );
     
-    add_bk_option( 'booking_gcal_events_form_fields', 'a:3:{s:5:"title";s:9:"text^name";s:11:"description";s:16:"textarea^details";s:5:"where";s:5:"text^";}');
+    	add_bk_option( 'booking_gcal_events_form_fields', 'a:3:{s:5:"title";s:9:"text^name";s:11:"description";s:16:"textarea^details";s:5:"where";s:5:"text^";}');
 }
 add_bk_action('wpbc_other_versions_activation',   'wpbc_sync_gcal_activate' );
 
@@ -527,12 +527,12 @@ function wpbc_sync_gcal_deactivate() {
     
     delete_bk_option( 'booking_gcal_events_max' );    
     delete_bk_option( 'booking_gcal_api_key' );    
-    delete_bk_option( 'booking_gcal_timezone');
+    	delete_bk_option( 'booking_gcal_timezone');
     delete_bk_option( 'booking_gcal_is_send_email' );
     delete_bk_option( 'booking_gcal_auto_import_is_active' );
     delete_bk_option( 'booking_gcal_auto_import_time' );
     
-    delete_bk_option( 'booking_gcal_events_form_fields');
+    	delete_bk_option( 'booking_gcal_events_form_fields');
 
 }
 add_bk_action('wpbc_other_versions_deactivation', 'wpbc_sync_gcal_deactivate' );

@@ -4,7 +4,7 @@
  * @category Core
  * @author wpdevelop
  *
- * @web-site http://wpbookingcalendar.com/
+ * @web-site https://wpbookingcalendar.com/
  * @email info@wpbookingcalendar.com 
  * 
  * @modified 2013.10.16
@@ -85,7 +85,7 @@ class WPBC_CSS extends WPBC_JS_CSS{
     }
 
 
-    public function remove_conflicts( $where_to_load ) {        
+    public function remove_conflicts( $where_to_load ) {
     
         if ( wpbc_is_bookings_page() ) {            
             if (function_exists('wp_dequeue_style')) {
@@ -98,7 +98,7 @@ class WPBC_CSS extends WPBC_JS_CSS{
                 wp_dequeue_style( 'chosen'); 
                 wp_dequeue_style( 'toolset-font-awesome-css' );                               // Remove this script sitepress-multilingual-cms/res/css/font-awesome.min.css?ver=3.1.6, which is load by the "sitepress-multilingual-cms"
                 wp_dequeue_style( 'toolset-font-awesome' );                          //FixIn: 5.4.5.8
-                
+                wp_dequeue_style( 'the7-fontello-css' );
             } 
         }
     }

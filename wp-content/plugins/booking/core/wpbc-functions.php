@@ -6,7 +6,7 @@
  * @category Functions
  * 
  * @author wpdevelop
- * @link http://wpbookingcalendar.com/
+ * @link https://wpbookingcalendar.com/
  * @email info@wpbookingcalendar.com
  *
  * @modified 29.09.2015
@@ -1097,7 +1097,7 @@ $is_old = false;
         if ( ! wpbc_is_this_demo() ) 
              $v = wpbc_get_ver_sufix();
         else $v = '';
-        return 'http://wpbookingcalendar.com/' . ( ( empty($v) ) ? '' : 'upgrade-' . $v  . '/' ) ;
+        return 'https://wpbookingcalendar.com/' . ( ( empty($v) ) ? '' : 'upgrade-' . $v  . '/' ) ;
     }
     
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1836,7 +1836,7 @@ $is_old = false;
     }
 
 
-    define ('OBC_CHECK_URL', 'http://wpbookingcalendar.com/');
+    define ('OBC_CHECK_URL', 'https://wpbookingcalendar.com/');
 
     function wpdev_ajax_check_bk_news( $sub_url = '' ){
 
@@ -1962,7 +1962,7 @@ $is_old = false;
         $wpdev_copyright_adminpanel  = get_bk_option( 'booking_wpdev_copyright_adminpanel' );             // check
         if ( ( $wpdev_copyright_adminpanel !== 'Off' ) && ( ! wpbc_is_this_demo() ) ) {
             $message = '';
-//            $message .= '<a target="_blank" href="http://wpbookingcalendar.com/">Booking Calendar</a> ' . __('version' ,'booking') . ' ' . WP_BK_VERSION_NUM ;
+//            $message .= '<a target="_blank" href="https://wpbookingcalendar.com/">Booking Calendar</a> ' . __('version' ,'booking') . ' ' . WP_BK_VERSION_NUM ;
 //
 //            $message .= ' | '. sprintf(__('Add your %s on %swordpress.org%s, if you enjoyed by this plugin.' ,'booking'), 
 //                            '<a target="_blank" href="http://goo.gl/tcrrpK" >&#9733;&#9733;&#9733;&#9733;&#9733;</a>',
@@ -2083,7 +2083,8 @@ function wpbc_get_params_in_url( $page_param , $exclude_params = array(), $only_
     $url = admin_url( add_query_arg(  $get_paramaters , 'admin.php' ) );
 
     if ( $is_escape_url )
-        $url = esc_url( $url );
+    	$url = esc_url_raw( $url );							//FixIn: 8.1.7
+        // $url = esc_url( $url );
     
     return $url;
     
@@ -2629,9 +2630,9 @@ function wpbc_welcome_panel_content() {
 
                     <li><div class="welcome-icon"><?php
                             printf( __( 'Check %show todo%s that and what %sshortcodes%s are available.','booking'),
-                                '<a href="http://wpbookingcalendar.com/help/inserting-booking-form/" target="_blank">',
+                                '<a href="https://wpbookingcalendar.com/help/inserting-booking-form/" target="_blank">',
                                 '</a>',
-                                '<a href="http://wpbookingcalendar.com/help/booking-calendar-shortcodes/" target="_blank">',
+                                '<a href="https://wpbookingcalendar.com/help/booking-calendar-shortcodes/" target="_blank">',
                                 '</a>' );
                     ?></div></li>
                     <li><div class="welcome-icon"><?php 
@@ -2667,17 +2668,17 @@ function wpbc_welcome_panel_content() {
                 <ul>
                     <li><div class="welcome-icon"><?php
                         printf( __( 'Check out our %sHelp%s' ,'booking'),
-                            '<a href="http://wpbookingcalendar.com/help/" target="_blank">',
+                            '<a href="https://wpbookingcalendar.com/help/" target="_blank">',
                             '</a>' );
                     ?></div></li>
                     <li><div class="welcome-icon"><?php
                         printf( __( 'See %sFAQ%s.' ,'booking'),
-                            '<a href="http://wpbookingcalendar.com/faq/" target="_blank">',
+                            '<a href="https://wpbookingcalendar.com/faq/" target="_blank">',
                             '</a>' );
                     ?></div></li>
                     <li><div class="welcome-icon"><?php
                         printf( __( 'Still having questions? Contact %sSupport%s.','booking'),
-                            '<a href="http://wpbookingcalendar.com/support/" target="_blank">',
+                            '<a href="https://wpbookingcalendar.com/support/" target="_blank">',
                             '</a>' );
                     ?></div></li>
                 </ul>
@@ -2685,7 +2686,7 @@ function wpbc_welcome_panel_content() {
         </div>
         <div class="welcome-icon welcome-widgets-menus" style="text-align:right;font-style:italic;"><?php
             printf( __( 'Need even more functionality? Check %s higher versions %s','booking'),
-                    '<a href="http://wpbookingcalendar.com/overview/" target="_blank">',
+                    '<a href="https://wpbookingcalendar.com/overview/" target="_blank">',
                     '</a>' 
                 ); ?>
         </div>

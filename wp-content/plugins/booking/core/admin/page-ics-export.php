@@ -5,7 +5,7 @@
  * @category    Settings API
  * @author      wpdevelop
  *
- * @web-site    http://wpbookingcalendar.com/
+ * @web-site    https://wpbookingcalendar.com/
  * @email       info@wpbookingcalendar.com 
  * @modified    2017-07-09
  * 
@@ -462,14 +462,19 @@ function wpbc_export_ics_feed__table() {
 function wpbc_export_ics_feed__update() {
 	
 	$validated_value = WPBC_Settings_API::validate_text_post_static( 'booking_export_feed1' );
-	
+
 	$validated_value = explode( '/', $validated_value );
-	$validated_value = array_map( 'sanitize_file_name', $validated_value );
+	foreach ( $validated_value as $v_i => $v_val ) {                                                                    //FixIn: 8.1.9
+		if ( strpos( $v_val, '.') !== false ) {
+			$v_val = sanitize_file_name( $v_val );
+		}
+		$validated_value[ $v_i ] = $v_val;
+	}
+	// $validated_value = array_map( 'sanitize_file_name', $validated_value );
 	$validated_value = implode( '/', $validated_value );
 	$validated_value = strtolower( $validated_value );
-
 	$validated_value = wpbc_make_link_relative( $validated_value );
-	
+
 	if ( empty( $validated_value ) )
 		$validated_value = '/ics/' . wpbc_get_slug_format( 'default' );
 	

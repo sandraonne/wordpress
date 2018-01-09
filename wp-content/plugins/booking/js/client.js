@@ -67,12 +67,18 @@ function init_datepick_cal(bk_type,  date_approved_par, my_num_month, start_day_
 				return false;
 			}																											//FixIn: 8.0.1.2 end
 
-			if ( typeof( bkRangeDaysSelection ) == 'function' ){ 														// Check if this minimum BS version, and then proced
+			//if ( typeof( bkRangeDaysSelection ) == 'function' ){ 			//FixIn: TimeFree											// Check if this minimum BS version, and then proced
 				if ( jQuery.isFunction( jQuery( ".datepick-days-cell" ).popover ) )     								// FixIn: 7.0.1.2  - 2016-12-10
 					jQuery( '.datepick-days-cell' ).popover( 'hide' );
-			}
+			//}
 
 			jQuery( '#date_booking' + bk_type ).val( date );
+
+			if ( typeof( bkDisableBookedTimeSlots ) == 'function' ){                                                    //FixIn: TimeFree
+                if(typeof( prepare_tooltip ) == 'function') {setTimeout("prepare_tooltip("+bk_type+");",1000);}
+				// HERE WE WILL DISABLE ALL OPTIONS IN RANGE TIME INTERVALS FOR SINGLE DAYS SELECTIONS FOR THAT DAYS WHERE HOURS ALREADY BOOKED
+				bkDisableBookedTimeSlots( jQuery( '#date_booking' + bk_type ).val(), bk_type );
+			}
 			if ( typeof( selectDayPro ) == 'function' ){
 				selectDayPro( date, bk_type );
 			}
@@ -330,11 +336,11 @@ function init_datepick_cal(bk_type,  date_approved_par, my_num_month, start_day_
         }
 
         function changeMonthYear(year, month){ 
-            if(typeof( bkRangeDaysSelection ) == 'function') { // Check if this minimum BS version, and then proced
+            //if(typeof( bkRangeDaysSelection ) == 'function') { // Check if this minimum BS version, and then proced   //FixIn: TimeFree
                 if(typeof( prepare_tooltip ) == 'function') {
                     setTimeout("prepare_tooltip("+bk_type+");",1000);
                 }
-            }
+            //}
             if(typeof( prepare_highlight ) == 'function') {
              setTimeout("prepare_highlight();",1000);
             }
@@ -392,9 +398,9 @@ function init_datepick_cal(bk_type,  date_approved_par, my_num_month, start_day_
         }
 
 
-        if(typeof( bkRangeDaysSelection ) == 'function') { // Check if this minimum BS version, and then proced
+        //if(typeof( bkRangeDaysSelection ) == 'function') { // Check if this minimum BS version, and then proced       //FixIn: TimeFree
             if(typeof( prepare_tooltip ) == 'function') {setTimeout("prepare_tooltip("+bk_type+");",1000);}
-        }
+        //}
 }
 
 
@@ -904,7 +910,7 @@ function send_ajax_submit(bk_type,formdata,captcha_chalange,user_captcha,is_send
             url: wpbc_ajaxurl, 
             type:'POST',
             success: function (data, textStatus){if( textStatus == 'success')   jQuery('#ajax_respond_insert' + bk_type).html( data ) ;},
-            error:function (XMLHttpRequest, textStatus, errorThrown){window.status = 'Ajax sending Error status:'+ textStatus;alert(XMLHttpRequest.status + ' ' + XMLHttpRequest.statusText);if (XMLHttpRequest.status == 500) {alert('Please check at this page according this error:' + ' http://wpbookingcalendar.com/faq/#ajax-sending-error');}},
+            error:function (XMLHttpRequest, textStatus, errorThrown){window.status = 'Ajax sending Error status:'+ textStatus;alert(XMLHttpRequest.status + ' ' + XMLHttpRequest.statusText);if (XMLHttpRequest.status == 500) {alert('Please check at this page according this error:' + ' https://wpbookingcalendar.com/faq/#ajax-sending-error');}},
             // beforeSend: someFunction,
             data:{
                 // ajax_action : 'INSERT_INTO_TABLE',
@@ -931,7 +937,7 @@ function send_ajax_submit(bk_type,formdata,captcha_chalange,user_captcha,is_send
 function showErrorMessage( element , errorMessage) {
     
     if(typeof( bk_form_step_click ) == 'function') {
-        bk_form_step_click();                                                   // rollback  to 1st  step,  if system  will show warning and booking form  is using this customization: in the Exmaple #2 here: http://wpbookingcalendar.com/faq/customize-booking-form-for-having-several-steps-of-reservation/ 
+        bk_form_step_click();                                                   // rollback  to 1st  step,  if system  will show warning and booking form  is using this customization: in the Exmaple #2 here: https://wpbookingcalendar.com/faq/customize-booking-form-for-having-several-steps-of-reservation/ 
     }
     
     makeScroll( element );
@@ -981,7 +987,7 @@ function showErrorMessage( element , errorMessage) {
 function showMessageUnderElement( element , errorMessage , message_type) {
     
     if(typeof( bk_form_step_click ) == 'function') {
-        bk_form_step_click();                                                   // rollback  to 1st  step,  if system  will show warning and booking form  is using this customization: in the Exmaple #2 here: http://wpbookingcalendar.com/faq/customize-booking-form-for-having-several-steps-of-reservation/ 
+        bk_form_step_click();                                                   // rollback  to 1st  step,  if system  will show warning and booking form  is using this customization: in the Exmaple #2 here: https://wpbookingcalendar.com/faq/customize-booking-form-for-having-several-steps-of-reservation/ 
     }
     
      makeScroll( element );
@@ -1133,4 +1139,3 @@ function wpbc_unselect_all_days( bk_type ){																				//FixIn: 8.0.1.2
 		jQuery.datepick._updateDatepick( inst );
 	}
 }
-
